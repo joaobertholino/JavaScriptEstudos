@@ -93,16 +93,49 @@ switch (fruta) {
 }
 
 // Estruturas de repetição => Repete varias vezes dependendo de alguma condição / Contador - Condição de limite - Incremento
-
 // For
-for (let f = 0; f < 10; f++){
-    console.log("O valor de f é:" + f); // Concatenação = Unir variaveis ao meu texto
+for (let f = 0; f < 10; f++) {
+  console.log("O valor de f é:" + f); // Concatenação = Unir variaveis ao meu texto
 }
 
 // While
 let w = 0;
 
 while (w < 10) {
-    w++   
-    console.log("O valor de w é:" + w);
+  w++;
+  console.log("O valor de w é:" + w);
+}
+
+// Do while
+let d = 0;
+
+do {
+  d++;
+  console.log("O valor de d é:" + d);
+} while (d < 10);
+
+// Funções => function nomeDaFunção(arg1, arg2) {codigo a ser reutilizado}
+function cumprimentar(nome) {
+  console.log("Olá! " + nome);
+}
+
+cumprimentar("João"); // Invocando a função
+
+// Escopo de variaveis
+let cor = "azul";
+
+console.log(cor); // Imprime o valor do escopo global
+
+function mostrarCor() {
+    let cor = "verde";
+    console.log(cor); // Imprime o valor do escopo local
+}
+
+mostrarCor()
+
+// Hoisting => Invorcar uma função antes da sua declaração
+testandoHoisting();
+
+function testandoHoisting() {
+    console.log("Deu Certo!");
 }
