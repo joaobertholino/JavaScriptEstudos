@@ -26,8 +26,8 @@ for (let i = 0; i < nomes.length; i++) {
 
 // Exercicio 5: Crie uma função que aceita uma string representando um horário no formato de 24 horas (por exemplo, "14:30"). A função deve retornar uma string que converta o horário para o formato de 12 horas (por exemplo, "2:30 PM").
 const converterHorario = (horario24) => {
-  const [hora, minuto] = horario24.split(":");
-  const hora12 = hora % 12 || 12;
+  const [hora, minuto] = horario24.split(":"); // Separa hora e minuto a partir do ":"
+  const hora12 = hora % 12 || 12; // Divide hora por 12 e entrega o resto => se o resto for igual a zero, vira 12
 
   if (hora >= 12) {
     periodo = "PM";

@@ -20,11 +20,8 @@ console.log(booleano1);
 console.log(typeof booleano2);
 
 var meuObjeto = {}; // Objeto
-
 var meuArray = []; // Array
-
 var meuNull = null; // Null
-
 var meuUndefined = undefined; // Undefined
 
 console.log(typeof meuObjeto);
@@ -121,15 +118,22 @@ function cumprimentar(nome) {
 
 cumprimentar("João"); // Invocando a função
 
+// Arrow function
+const testeArrow = () => {
+  console.log("Isso também é uma função.");
+}
+
+testeArrow();
+
 // Escopo de variáveis
 let cor = "azul";
 
 console.log(cor); // Imprime o valor do escopo global
 
-function mostrarCor() {
-  let cor = "verde";
-  console.log(cor); // Imprime o valor do escopo local
-}
+const mostrarCor = () => {
+  let cor = "Verde";
+  console.log(cor);
+};
 
 mostrarCor();
 
@@ -139,11 +143,6 @@ testandoHoisting();
 function testandoHoisting() {
   console.log("Deu Certo!");
 }
-
-// Arrow function
-const testeArrow = () => console.log("Isso também é uma função.");
-
-testeArrow();
 
 // Truthy e Falsy => Reconhece alguns valores como "true" ou "false" mesmo que não seja um boolean
 const minhaVariavel1 = ""; // Falsy
