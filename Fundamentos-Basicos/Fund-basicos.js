@@ -1,13 +1,13 @@
-// var nomeDaVariavel = "valorDaVariavel"
-var minhaVariavel = "Olá mundo!";
-console.log(minhaVariavel);
+// var nomeDaVariável = "valorDaVariável"
+var nomeDaVariavel = "Olá mundo!";
+console.log(nomeDaVariavel);
 
-// Variaveis e tipos de dados
+// Variáveis e tipos de dados
 var meuNumero = 10;
 console.log(meuNumero);
 console.log(meuNumero + 15);
 
-// Uso de "" em valor numerico é interpretado como texto
+// Uso de "" em valor numérico é interpretado como texto
 console.log("10" + 5);
 
 // Faz a checagem sobre qual tipo de dado esta armazenado
@@ -32,7 +32,7 @@ console.log(typeof meuArray);
 console.log(typeof meuNull);
 console.log(typeof meuUndefined);
 
-// Novas formas de declarar variaveis => "var" e "const"
+// Novas formas de declarar variáveis => "var" e "const"
 let x = 10;
 
 console.log(typeof x);
@@ -42,7 +42,7 @@ const y = 15;
 
 console.log(x, y);
 
-// Operadores aritiméticos
+// Operadores aritméticos
 console.log(x + y); // Soma
 console.log(x - y); // Subtração
 console.log(x * y); // Multiplicação
@@ -54,7 +54,7 @@ console.log(x != y); // Verifica se valores são diferentes
 console.log(x === y); // Leva em consideração o tipo do dado analisado
 console.log(x !== y); // Verifica apenas se o tipo dos dados são diferentes
 
-// Operadores logicos => "and = &&" "or = ||"
+// Operadores lógicos => "and = &&" "or = ||"
 console.log(10 > 5 && 5 > 10); // Verifica ambos os lados da operação
 console.log(10 > 5 || 5 > 10); // Verifica apenas um lado da operação
 
@@ -95,7 +95,7 @@ switch (fruta) {
 // Estruturas de repetição => Repete varias vezes dependendo de alguma condição / Contador - Condição de limite - Incremento
 // For
 for (let f = 0; f < 10; f++) {
-  console.log("O valor de f é:" + f); // Concatenação = Unir variaveis ao meu texto
+  console.log("O valor de f é:" + f); // Concatenação = Unir variáveis ao meu texto
 }
 
 // While
@@ -114,28 +114,93 @@ do {
   console.log("O valor de d é:" + d);
 } while (d < 10);
 
-// Funções => function nomeDaFunção(arg1, arg2) {codigo a ser reutilizado}
+// Funções => function nomeDaFunção(arg1, arg2) {código a ser reutilizado}
 function cumprimentar(nome) {
   console.log("Olá! " + nome);
 }
 
 cumprimentar("João"); // Invocando a função
 
-// Escopo de variaveis
+// Escopo de variáveis
 let cor = "azul";
 
 console.log(cor); // Imprime o valor do escopo global
 
 function mostrarCor() {
-    let cor = "verde";
-    console.log(cor); // Imprime o valor do escopo local
+  let cor = "verde";
+  console.log(cor); // Imprime o valor do escopo local
 }
 
-mostrarCor()
+mostrarCor();
 
-// Hoisting => Invorcar uma função antes da sua declaração
+// Hoisting => Invocar uma função antes da sua declaração
 testandoHoisting();
 
 function testandoHoisting() {
-    console.log("Deu Certo!");
+  console.log("Deu Certo!");
 }
+
+// Arrow function
+const testeArrow = () => console.log("Isso também é uma função.");
+
+testeArrow();
+
+// Truthy e Falsy => Reconhece alguns valores como "true" ou "false" mesmo que não seja um boolean
+const minhaVariavel1 = ""; // Falsy
+
+if (minhaVariavel1) {
+  console.log("Verdadeiro");
+} else {
+  console.log("Falso");
+}
+
+const minhaVariavel2 = "Algum texto"; // Truthy
+
+if (minhaVariavel2) {
+  console.log("Verdadeiro");
+} else {
+  console.log("Falso");
+}
+
+// Array / Listas => Caracterizado pela abertura e fechamento de colchetes "[]"
+const numeros = [1, 2, 3, 4, 5];
+
+console.log(numeros);
+console.log(numeros[0]); // O primeiro valor sempre inicia com zero
+
+numeros.push(6); // Adicionando valores no arraw
+
+console.log(numeros);
+
+numeros.pop();
+console.log(numeros);
+
+// Strings
+const minhaStringNova = "Olá, Mundo! "
+
+const minhaString2 = minhaStringNova + "Tudo bem?" // Concatenação
+
+console.log(minhaString2);
+
+const minhaString3 = `${minhaStringNova}Fazendo interpolação` // Interpolação => Concatenação mais moderna
+
+console.log(minhaString3);
+
+console.log(minhaString3.length); // Exibe a quantidade de caracteres
+console.log(minhaString3[5]); // Exibe um carácter específico
+console.log(minhaString3.toUpperCase()); // Exibe a string em caixa alta
+
+// Objeto "Date"
+const agora = Date()
+
+console.log(agora);
+
+const natal = new Date(2023, 11, 25) // "Ano", "Mês (Iniciasse no zero)", "Dia"
+
+console.log(natal);
+
+// Objeto "Math"
+console.log(Math.PI); // Exibe o valor do PI
+console.log(Math.round(3.5)); // Arredonda valores
+console.log(Math.sqrt(4)); // Exibe o valor de uma raiz quadrada
+console.log(Math.pow(2,3)); // Exibe o valor de um numero elevado a uma potencia
