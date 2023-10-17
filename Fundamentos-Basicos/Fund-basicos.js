@@ -176,13 +176,13 @@ numeros.pop();
 console.log(numeros);
 
 // Strings
-const minhaStringNova = "Olá, Mundo! "
+const minhaStringNova = "Olá, Mundo! ";
 
-const minhaString2 = minhaStringNova + "Tudo bem?" // Concatenação
+const minhaString2 = minhaStringNova + "Tudo bem?"; // Concatenação
 
 console.log(minhaString2);
 
-const minhaString3 = `${minhaStringNova}Fazendo interpolação` // Interpolação => Concatenação mais moderna
+const minhaString3 = `${minhaStringNova}Fazendo interpolação`; // Interpolação => Concatenação mais moderna
 
 console.log(minhaString3);
 
@@ -191,11 +191,11 @@ console.log(minhaString3[5]); // Exibe um carácter específico
 console.log(minhaString3.toUpperCase()); // Exibe a string em caixa alta
 
 // Objeto "Date"
-const agora = Date()
+const agora = Date();
 
 console.log(agora);
 
-const natal = new Date(2023, 11, 25) // "Ano", "Mês (Iniciasse no zero)", "Dia"
+const natal = new Date(2023, 11, 25); // "Ano", "Mês (Iniciasse no zero)", "Dia"
 
 console.log(natal);
 
@@ -203,4 +203,4 @@ console.log(natal);
 console.log(Math.PI); // Exibe o valor do PI
 console.log(Math.round(3.5)); // Arredonda valores
 console.log(Math.sqrt(4)); // Exibe o valor de uma raiz quadrada
-console.log(Math.pow(2,3)); // Exibe o valor de um numero elevado a uma potencia
+console.log(Math.pow(2, 3)); // Exibe o valor de um numero elevado a uma potencia

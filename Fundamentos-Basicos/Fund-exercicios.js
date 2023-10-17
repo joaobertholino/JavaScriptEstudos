@@ -28,13 +28,13 @@ for (let i = 0; i < nomes.length; i++) {
 const converterHorario = (horario24) => {
   const [hora, minuto] = horario24.split(":");
   const hora12 = hora % 12 || 12;
-  
+
   if (hora >= 12) {
-    periodo = "PM"
-  } else if(hora < 12){
-    periodo = "AM"
+    periodo = "PM";
+  } else if (hora < 12) {
+    periodo = "AM";
   }
-    
+
   console.log(`${hora12}:${minuto}:${periodo}`);
 };
 
