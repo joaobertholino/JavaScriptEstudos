@@ -1,7 +1,7 @@
 // Exercicio 1: Criar script que imprima "Olá, Mundo!" no console
 console.log("Olá, Mundo!");
 
-// Exercicio 2: Dado o valor de uma string "1234, converta-o em um numero e exiba o tipo da variavel no console"
+// Exercicio 2: Dado o valor de uma string "1234", converta-o em um numero e exiba o tipo da variavel no console"
 const minhaString = "1234";
 console.log(typeof minhaString);
 
@@ -17,7 +17,7 @@ console.log(`O numero de caracteres é: ${qntCaracteres}`);
 const qntPalavras = jsIncrivel.split(" ").length; // Quantidade de palavras
 console.log(`O numero de palavras é: ${qntPalavras}`);
 
-// Exercicio 4: Crie um array com cinco nomes, use um loop for para imprimir cada nome no console
+// Exercicio 4: Crie um array com cinco nomes, use um "loop for" para imprimir cada nome no console
 const nomes = ["João", "Nicolas", "Ellen", "Matheus", "Adriano"];
 
 for (let i = 0; i < nomes.length; i++) {
