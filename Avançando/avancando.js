@@ -43,7 +43,7 @@ try {
   console.log(error.message); // O ".message" retorna apenas o conteúdo da mensagem
 }
 
-console.log("Continuando o programa..."); // Usando "try - catch", mesmo com error, o programa continua sendo executado
+console.log("Continuando o programa..."); // Usando "tryCatch", mesmo com error, o programa continua sendo executado
 
 // Callback => Uma função que será executada em outra função
 const cumprimentar = (nome, saudação) => {
@@ -87,22 +87,52 @@ promessa
   });
 
 // Bibliotecas "Promise based"
-
 const promise1 = Promise.resolve("Promessa instantânea"); // Uma "Promise" tem acesso direto ao metodo "resolve" e "Reject" sem passar por uma função
 const promise2 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 2500, "Promessa não instantânea");
+  setTimeout(resolve, 250000, "Promessa não instantânea");
 });
 
 Promise.all([promise1, promise2]).then((valores) => console.log(valores)); // Fazendo com que tanto a promessa com setTimeout, quanto a promessa instantânea sejam exibidas simultaneamente
 
 // Async Await
+// Sem uso de "tryCatch"
 const obterValor = async () => {
   const promessa = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("Valor obtido"), 2000);
+    setTimeout(() => resolve("Valor obtido"), 200000);
   });
 
   const valor = await promessa;
   console.log(valor);
 };
 
-obterValor()
+obterValor();
+
+// Com uso de "tryCatch"
+const obterValorComErro = async () => {
+  try {
+    const promessa = new Promise((resolve, reject) => {
+      setTimeout(() => reject("Valor com erro"), 300000);
+    });
+
+    const valorComErro = await promessa;
+    console.log(valorComErro);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+obterValorComErro();
+
+// JSON => JavaScript Object Notation
+// Padroniza a cominicação entre font-end e back-end em apenas uma linguagem
+const objeto = { nome: "João", idade: 21 };
+const jsonString = JSON.stringify(objeto); // Converte objeto para JSON
+
+console.log(jsonString);
+console.log(typeof jsonString);
+
+const json = '{ "nome": "João", "idade": 21 }';
+const objeto2 = JSON.parse(json); // Converte JSON para objeto
+
+console.log(objeto2);
+console.log(typeof objeto2);
