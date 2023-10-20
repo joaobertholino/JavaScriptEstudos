@@ -63,7 +63,7 @@ document.body.removeChild(metodoAntigo); // Remove um elemento
 // Events
 const botão = document.querySelector("#botaoCriar");
 botão.addEventListener("click", () => {
-  console.log("Botão clicado!"); // Evento de "click" acionado por callback
+  console.log("Botão clicado!"); // Evento de "click"(Computa quando um elemento recebe um click do mouse) acionado por callback
 });
 
 const element5 = document.querySelector("#meuFormulario");
@@ -77,8 +77,29 @@ campoInput.addEventListener("keydown", () => {
 });
 
 const form = document.querySelector("form");
-form.addEventListener("submit", () => {
-  console.log("Formulario enviado");
-})
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Dasabilita o comportamento padrão do elemento
+  console.log("Formulario enviado!"); // Evento de "submit"(Computa quando os dados de um formulario é enviado ao servidor) acionado por callback
+});
 
-// 2:47:42 - Tempo da aula
+// Propagação de eventos
+document.querySelector("#elementoPai").addEventListener("click", () => {
+  console.log("Clique capturado no pai!"); // Eventos no elemento pai propagam no filho
+});
+
+document.querySelector("#elementoFilho").addEventListener("click", (event) => {
+  event.stopPropagation(); // Faz com que o elemento execute apenas o elemento dele, sem propagação
+  console.log("Clique capturado no filho!");
+});
+
+document.querySelector("#meuLink").addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("Clicou no link!");
+});
+
+// Delegação de eventos
+document.querySelector("#elementoPai").addEventListener("click", (event) => {
+  if (event.target.matches(".classeDosFilhos")) {
+    console.log("Evento delegado para o filho!");
+  }
+});
