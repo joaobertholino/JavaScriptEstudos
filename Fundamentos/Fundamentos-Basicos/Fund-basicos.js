@@ -1,6 +1,6 @@
 // var nomeDaVariável = "valorDaVariável"
-var nomeDaVariavel = "Olá mundo!";
-console.log(nomeDaVariavel);
+var nomeDaVariável = "Olá mundo!";
+console.log(nomeDaVariável);
 
 // Variáveis e tipos de dados
 var meuNumero = 10;
@@ -145,34 +145,34 @@ function testandoHoisting() {
 }
 
 // Truthy e Falsy => Reconhece alguns valores como "true" ou "false" mesmo que não seja um boolean
-const minhaVariavel1 = ""; // Falsy
+const minhaVariável1 = ""; // Falsy
 
-if (minhaVariavel1) {
+if (minhaVariável1) {
   console.log("Verdadeiro");
 } else {
   console.log("Falso");
 }
 
-const minhaVariavel2 = "Algum texto"; // Truthy
+const minhaVariável2 = "Algum texto"; // Truthy
 
-if (minhaVariavel2) {
+if (minhaVariável2) {
   console.log("Verdadeiro");
 } else {
   console.log("Falso");
 }
 
 // Array / Listas => Caracterizado pela abertura e fechamento de colchetes "[]"
-const numeros = [1, 2, 3, 4, 5];
+const números = [1, 2, 3, 4, 5];
 
-console.log(numeros);
-console.log(numeros[0]); // O primeiro valor sempre inicia com zero
+console.log(números);
+console.log(números[0]); // O primeiro valor sempre inicia com zero
 
-numeros.push(6); // Adicionando valores no arraw
+números.push(6); // Adicionando valores no array
 
-console.log(numeros);
+console.log(números);
 
-numeros.pop();
-console.log(numeros);
+números.pop();
+console.log(números);
 
 // Strings
 const minhaStringNova = "Olá, Mundo! ";

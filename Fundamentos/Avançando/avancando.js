@@ -10,34 +10,34 @@ console.log(frutas);
 console.log(frutas);
 
 // Map, Filter, Reduce => Arrow function
-const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const numeroPar = numeros.find((num) => num % 2 === 0); // O metodo "find" retorna apenas o primeiro elemento do critério
-const numerosPares = numeros.filter((numP) => numP % 2 === 0); // O metodo "Filter" retorna todos os elementos de acordo com o critério
+const números = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numeroPar = números.find((num) => num % 2 === 0); // O método "find" retorna apenas o primeiro elemento do critério
+const númerosPares = números.filter((numP) => numP % 2 === 0); // O método "Filter" retorna todos os elementos de acordo com o critério
 
 console.log(numeroPar);
-console.log(numerosPares);
+console.log(númerosPares);
 
 // Manipulação de strings
 const frase = "Olá, mundo!     ";
-const palavras = frase.trim(); // O metodo "trim" retorna o valor da string sem espaçamentos no inicio e no final
+const palavras = frase.trim(); // O método "trim" retorna o valor da string sem espaçamentos no inicio e no final
 
 console.log(palavras);
 
-const frase2 = "JavaScript é incrivel!";
+const frase2 = "JavaScript é incrível!";
 
-console.log(frase2.startsWith("Java")); // Retorna "true" caso haja correspondencia exata, mesmo que incompleta, no inicio da string
-console.log(frase2.startsWith("java")); // Retorna "false" caso haja alguma não-correspondencia, tambem no inicio da string
+console.log(frase2.startsWith("Java")); // Retorna "true" caso haja correspondência exata, mesmo que incompleta, no inicio da string
+console.log(frase2.startsWith("java")); // Retorna "false" caso haja alguma não-correspondência, também no inicio da string
 
-console.log(frase2.endsWith("!")); // Retorna "true" caso haja correspondencia exata, porem, no final da string
-console.log(frase2.endsWith("?")); // Retorna "false" caso haja alguma não-correspondencia, tambem no final da string
+console.log(frase2.endsWith("!")); // Retorna "true" caso haja correspondência exata, porem, no final da string
+console.log(frase2.endsWith("?")); // Retorna "false" caso haja alguma não-correspondência, também no final da string
 
 //Exceções e tratamento de erros
 const idade = 15;
 
-// Executa um codigo em "try" e exibe erros em "catch"
+// Executa um código em "try" e exibe erros em "catch"
 try {
   if (idade < 18) {
-    throw new Error("Voçe deve ter pelo menos 18 anos!"); // Criando um objeto "Error" apartir de uma classe "new", onde "throw" executa esse erro, quando temos um erro, o JavaScript encerra por completo a execução do programa
+    throw new Error("Voce deve ter pelo menos 18 anos!"); // Criando um objeto "Error" a partir de uma classe "new", onde "throw" executa esse erro, quando temos um erro, o JavaScript encerra por completo a execução do programa
   }
 } catch (error) {
   console.log(error.message); // O ".message" retorna apenas o conteúdo da mensagem
@@ -67,7 +67,7 @@ setTimeout(() => {
   console.log("Oi!"); // Não recebe uma função nomeada ou anônima, e sim, recebe uma callback
 }, 500000);
 
-// Promises => Promete que irá executar um codigo após uma condição
+// Promises => Promete que irá executar um código após uma condição
 const promessa = new Promise((resolve, reject) => {
   const condição = true;
 
@@ -80,14 +80,14 @@ const promessa = new Promise((resolve, reject) => {
 
 promessa
   .then((mensagem) => {
-    console.log(mensagem); // Executa a promessa => codigo prometido
+    console.log(mensagem); // Executa a promessa => código prometido
   })
   .catch((erro) => {
     console.log(erro);
   });
 
 // Bibliotecas "Promise based"
-const promise1 = Promise.resolve("Promessa instantânea"); // Uma "Promise" tem acesso direto ao metodo "resolve" e "Reject" sem passar por uma função
+const promise1 = Promise.resolve("Promessa instantânea"); // Uma "Promise" tem acesso direto ao método "resolve" e "Reject" sem passar por uma função
 const promise2 = new Promise((resolve, reject) => {
   setTimeout(resolve, 250000, "Promessa não instantânea");
 });
@@ -124,7 +124,7 @@ const obterValorComErro = async () => {
 obterValorComErro();
 
 // JSON => JavaScript Object Notation
-// Padroniza a cominicação entre font-end e back-end em apenas uma linguagem
+// Padroniza a comunicação entre font-end e back-end em apenas uma linguagem
 const objeto = { nome: "João", idade: 21 };
 const jsonString = JSON.stringify(objeto); // Converte objeto para JSON
 
