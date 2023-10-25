@@ -32,5 +32,64 @@ JavaScript é uma linguagem de programação amplamente utilizada no desenvolvim
 
 ```javascript
 var nome = "João";
-let idade = 21;
+let idade = 30;
 const PI = 3.1415;
+```
+
+JavaScript oferece três formas de declarar variáveis: `var`, `let` e `const`. As variáveis podem armazenar diversos tipos de dados, incluindo strings, números, objetos e muito mais.
+
+## Estruturas de Controle
+
+```javascript
+if (condição) {
+  // código a ser executado se a condição for verdadeira
+} else {
+  // código a ser executado se a condição for falsa
+}
+
+for (let i = 0; i < 5; i++) {
+  // código a ser repetido
+}
+
+while (condição) {
+  // código a ser repetido enquanto a condição for verdadeira
+}
+```
+
+JavaScript suporta estruturas de controle, como condicionais (`if`, `else`), loops (`for`, `while`) e muito mais para controlar o fluxo de seu programa.
+
+## Funções
+
+```javascript
+function saudacao(nome) {
+  return "Olá, " + nome + "!";
+}
+```
+
+Funções em JavaScript são blocos de código reutilizável que podem aceitar parâmetros e retornar valores. Isso permite modularizar seu código e torná-lo mais organizado.
+
+## Objetos
+
+```javascript
+let pessoa = {
+  nome: "João",
+  idade: 30,
+  cidade: "Exemploville"
+};
+```
+
+Em JavaScript, você pode criar objetos que contêm propriedades e métodos. Objetos são uma parte fundamental da linguagem e são usados para representar dados estruturados.
+
+## Peculiaridades
+
+- **Escopo de Função:** JavaScript usa escopo de função, o que significa que as variáveis declaradas dentro de uma função não são acessíveis fora dela.
+
+- **Coerção de Tipo:** JavaScript pode realizar coerção de tipo, o que pode levar a resultados inesperados em algumas situações.
+
+- **Eventos:** JavaScript é amplamente utilizado para manipular eventos do navegador, como cliques, teclados e muito mais.
+
+- **Callback Hell:** Aninhar várias funções de retorno de chamada pode levar a um padrão conhecido como "callback hell," o que pode dificultar a manutenção do código.
+
+- **Promessas:** Para lidar com a assincronia, JavaScript introduziu o conceito de Promessas para facilitar a escrita de código assíncrono mais legível.
+
+Este guia fornece uma visão geral básica das características do JavaScript. Lembre-se de que JavaScript é uma linguagem rica e versátil, com muito mais a explorar. Conforme você se aprofunda no desenvolvimento web e na programação, você descobrirá muitas outras características e peculiaridades interessantes do JavaScript.
