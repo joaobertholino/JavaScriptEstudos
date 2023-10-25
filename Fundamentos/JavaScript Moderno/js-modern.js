@@ -99,7 +99,7 @@ const saudaçãoObject = {
 };
 saudaçãoObject.dizerOi(); // Chamando o método "dizerOi" do objeto "saudaçãoObject", que executa o código dentro dele
 
-// Classes e Heranças
+// Classes
 class Pessoa {
   constructor(nome, idade) {
     this.nome = nome; // "this" => Atribui o valor de "nome" enviado para a propriedade "nome" do objeto
@@ -107,7 +107,9 @@ class Pessoa {
   }
 
   falar() {
-    console.log(`Olá pessoal, meu nome é ${this.nome}`); // Sempre ao se referir ao objeto, usa-se o "this"
+    console.log(
+      `Olá pessoal, meu nome é ${this.nome} e tenho ${this.idade} anos`
+    ); // Sempre ao se referir ao objeto, usa-se o "this"
   }
 }
 
@@ -119,4 +121,23 @@ const dev2 = new Pessoa("Ellen", 17); // "dev2" agora é um objeto que recebeu a
 console.log(dev2);
 dev2.falar();
 
-// https://youtu.be/OYPbr6ZG3pc?t=13398 - Tempo da aula
+// Heranças => Uma classe que herda uma propriedade de outra classe
+class Funcionário extends Pessoa {
+  constructor(nome, idade, salario) {
+    super(nome, idade); // "super" => É usado para chamar métodos ou construtores da classe pai (superClasse) quando uma classe estende outra classe (subClasse) por meio de herança
+    this.salario = salario; // Atribuindo "salario" à propriedade "salario" da classe "Funcionário"
+  }
+
+  falar() {
+    super.falar(); // Chamando o método "falar" da classe pai "Pessoa" antes de adicionar a lógica especifica do "Funcionário"
+    console.log(`Recebo R$${this.salario}`);
+  }
+}
+
+const funcionário1 = new Funcionário("Mario", 34, 3200); // Criando uma instância da classe "Funcionário" chamada "funcionário1" e passando os valores "Mario" para o "nome", "34" para a "idade" e "3200" para o "salário".
+console.log(funcionário1);
+funcionário1.falar();
+
+const funcionário2 = new Funcionário("Andre", 29, 5000);
+console.log(funcionário2);
+funcionário2.falar();
