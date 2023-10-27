@@ -91,5 +91,3 @@ Em JavaScript, você pode criar objetos que contêm propriedades e métodos. Obj
 - **Callback Hell:** Aninhar várias funções de retorno de chamada pode levar a um padrão conhecido como "callback hell," o que pode dificultar a manutenção do código.
 
 - **Promessas:** Para lidar com a assincronia, JavaScript introduziu o conceito de Promessas para facilitar a escrita de código assíncrono mais legível.
-
-Este guia fornece uma visão geral básica das características do JavaScript. Lembre-se de que JavaScript é uma linguagem rica e versátil, com muito mais a explorar. Conforme você se aprofunda no desenvolvimento web e na programação, você descobrirá muitas outras características e peculiaridades interessantes do JavaScript.

@@ -1,4 +1,4 @@
-// Declarando variáveis
+// Aula 1 => Declarando variáveis
 var meuTeste = 1; // Declarando variável de tipo "number" usando a sintaxe de "camelCase"
 console.log(meuTeste); // "console.log()" => Exibe um valor no console
 
