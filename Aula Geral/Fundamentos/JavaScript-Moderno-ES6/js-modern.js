@@ -1,7 +1,7 @@
 // ES6+ => ECMAScript 6 (ES2015)
 // "let" e "const"
 let n = 10;
-n = 20; // Exemplo de tipagem fraca
+n = "20"; // Exemplo de tipagem fraca
 
 const x = 15; // "const" => Não pode ser alterado, caso seja, computara um erro
 
