@@ -49,8 +49,6 @@ console.log(igualdadeEstrita1 === igualdadeEstrita2); // Comparação levando em
 
 // Operadores lógicos
 // "&&"(AND) => Retorna verdadeiro se ambos os operandos forem verdadeiros
-// "||"(OR) => Retorna verdadeiro se pelo menos um dos operandos for verdadeiro
-// "!"(NOT) => Inverte o valor lógico de um operando, ou seja, se for verdadeiro, torna-se falso, e vice-versa
 let idade3 = 13;
 if (idade3 >= 50) {
   console.log("Senior");
@@ -62,7 +60,22 @@ if (idade3 >= 50) {
   console.log("Criança");
 }
 
-let testandoOr = 40;
-console.log(testandoOr >= 40 || testandoOr < 30); // "||" => Nesse exemplo esta tentando saber quais operandos retorna "true"
+// "||"(OR) => Retorna verdadeiro se pelo menos um dos operandos for verdadeiro
+let idade4 = 13;
+if (idade4 >= 50) {
+  console.log("Senior");
+} else if (idade4 > 18 || idade4 < 50) {
+  console.log("Adulto"); // "||" => Nesse exemplo esta comparando qual retorna "true", se "idade4 é maior que 18" ou se "idade4 é menor que 50"
+} else if (idade4 < 18 || idade4 >= 14) {
+  console.log("Adolescente"); // "||" => Nesse exemplo esta comparando qual retorna "true", se "idade4 é menor que 18" ou se "idade4 é maior ou igual a 14"
+} else {
+  console.log("Criança");
+}
 
-// Aula #17 - Operador logico OR
+if ((idade4 == 13 && 15 > 20) || 10 === "10") {
+  console.log("Isolamento de operações feita com sucesso"); // Para isolar operações é usado "()"
+} else {
+  console.log("Isolamento de operações feita sem sucesso");
+}
+
+// "!"(NOT) => Inverte o valor lógico de um operando, ou seja, se for verdadeiro, torna-se falso, e vice-versa
