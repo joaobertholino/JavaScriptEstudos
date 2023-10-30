@@ -1,4 +1,4 @@
-// Aula 3 => Operadores de condição, de comparação e de logica
+// Aula 3 => Operadores de condição, comparação, logica e de atribuição
 // Operadores condicionais => "if", "else if", "else"
 if (true) {
   console.log("Testando o 'if'"); // "if" => Executa um bloco de código se a condição for verdadeira
@@ -79,3 +79,23 @@ if ((idade4 == 13 && 15 > 20) || 10 === "10") {
 }
 
 // "!"(NOT) => Inverte o valor lógico de um operando, ou seja, se for verdadeiro, torna-se falso, e vice-versa
+if (!true) {
+  console.log("Passou");
+} else {
+  console.log("Não passou");
+}
+
+if (!false) {
+  console.log("Passou");
+} else {
+  console.log("Não passou");
+}
+
+let nome = "João"; // É necessário isolar a operação com parenteses para atribuir o operador "NOT"
+if (!(nome === "João")) {
+  console.log("Passou");
+} else {
+  console.log("Não passou");
+}
+
+// Operadores de atribuição => https://youtu.be/uL8-YwULUHA?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6
