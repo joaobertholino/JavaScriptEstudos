@@ -98,4 +98,32 @@ if (!(nome === "João")) {
   console.log("Não passou");
 }
 
-// Operadores de atribuição => https://youtu.be/uL8-YwULUHA?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6
+// Operadores de atribuição => Forma resumida da operação "x = x + y"
+// "=" => Usado para atribuir um valor a uma variável
+// "+=" => Adiciona o valor à direita ao valor da variável à esquerda e atribui o resultado à variável à esquerda
+// "-=" => Subtrai o valor à direita do valor da variável à esquerda e atribui o resultado à variável à esquerda
+// "*=" => Multiplica o valor à direita pelo valor da variável à esquerda e atribui o resultado à variável à esquerda
+// "/=" => Divide o valor da variável à esquerda pelo valor à direita e atribui o resultado à variável à esquerda
+// "%=" => Calcula o resto da divisão do valor da variável à esquerda pelo valor à direita e atribui o resultado à variável à esquerda
+// "**=" => Eleva o valor da variável à esquerda à potência do valor à direita e atribui o resultado à variável à esquerda
+let x = 1;
+let y = 2;
+
+// Adição
+console.log((x = x + y));
+console.log((x += y));
+
+// Subtração
+console.log((x -= y));
+
+// Multiplicação
+console.log((x *= y));
+
+// Divisão
+console.log((x /= y));
+
+// Resto da divisão
+console.log((x %= y));
+
+// Expoente
+console.log((x **= y));
