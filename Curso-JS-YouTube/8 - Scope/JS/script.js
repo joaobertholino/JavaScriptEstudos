@@ -7,9 +7,7 @@ const testeScope = () => {
   let scope = 2; // Escopo local
   console.log(scope); // Retorna no console o valor da variável do escopo local, porém, o contrario não é possível
   console.log(scope2); // É possível chamar variáveis do escopo global, no escopo local
-}
+};
 
 console.log(scope); // Retorna no console o valor da variável do escopo global
-testeScope()
-
-// Curso JavaScript #26 - let e const => https://youtu.be/kugQNQl8sF0?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6&t=75
+testeScope();
