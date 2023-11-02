@@ -41,33 +41,33 @@ if (idade2 >= 50) {
 
 let igualdadeNaoEstrita1 = "5"; // "=" => Operador de atribuição, altera ou atribui um valor a uma variável
 let igualdadeNaoEstrita2 = 5;
-console.log(igualdadeNaoEstrita1 == igualdadeNaoEstrita2); // Comparação sem levar em consideração o tipo do dado comparado
+console.log(igualdadeNaoEstrita1 == igualdadeNaoEstrita2); // "==" => Comparação sem levar em consideração o tipo do dado comparado
 
 let igualdadeEstrita1 = "10";
 let igualdadeEstrita2 = 10;
-console.log(igualdadeEstrita1 === igualdadeEstrita2); // Comparação levando em conta o tipo do dado comparado => Garante mais confiabilidade ao código
+console.log(igualdadeEstrita1 === igualdadeEstrita2); // "===" => Comparação levando em conta o tipo do dado comparado => Garante mais confiabilidade ao código
 
 // Operadores lógicos
-// "&&"(AND) => Retorna verdadeiro se ambos os operandos forem verdadeiros
+// "&&"(AND) => Retorna "true" se ambas as operações retornarem "true"
 let idade3 = 13;
 if (idade3 >= 50) {
   console.log("Senior");
 } else if (idade3 > 18 && idade3 < 50) {
-  console.log("Adulto"); // "&&" => Nesse exemplo esta comparando se idade3 é maior que 18 e menor que 50
+  console.log("Adulto"); // "&&" => Comparando se "idade3" é maior que "18" e menor que "50"
 } else if (idade3 < 18 && idade3 >= 14) {
-  console.log("Adolescente"); // "&&" => Nesse exemplo esta comparando se idade3 é menor que 18 e maior ou igual a 14
+  console.log("Adolescente"); // "&&" => Comparando se "idade3" é menor que "18" e maior ou igual a "14"
 } else {
   console.log("Criança");
 }
 
-// "||"(OR) => Retorna verdadeiro se pelo menos um dos operandos for verdadeiro
+// "||"(OR) => Retorna verdadeiro se pelo menos uma das operações retornarem "true"
 let idade4 = 13;
 if (idade4 >= 50) {
   console.log("Senior");
 } else if (idade4 > 18 || idade4 < 50) {
-  console.log("Adulto"); // "||" => Nesse exemplo esta comparando qual retorna "true", se "idade4 é maior que 18" ou se "idade4 é menor que 50"
+  console.log("Adulto"); // "||" => Comparando qual operação retorna "true", se "idade4" é maior que "18" ou se "idade4" é menor que "50"
 } else if (idade4 < 18 || idade4 >= 14) {
-  console.log("Adolescente"); // "||" => Nesse exemplo esta comparando qual retorna "true", se "idade4 é menor que 18" ou se "idade4 é maior ou igual a 14"
+  console.log("Adolescente"); // "||" => Nesse exemplo esta comparando qual retorna "true", se "idade4" é menor que "18" ou se "idade4" é maior ou igual a "14"
 } else {
   console.log("Criança");
 }
@@ -78,7 +78,7 @@ if ((idade4 == 13 && 15 > 20) || 10 === "10") {
   console.log("Isolamento de operações feita sem sucesso");
 }
 
-// "!"(NOT) => Inverte o valor lógico de um operando, ou seja, se for verdadeiro, torna-se falso, e vice-versa
+// "!"(NOT) => Inverte o valor lógico de um operando, ou seja, se for "true", torna-se "false", e vice-versa
 if (!true) {
   console.log("Passou");
 } else {
@@ -91,7 +91,7 @@ if (!false) {
   console.log("Não passou");
 }
 
-let nome = "João"; // É necessário isolar a operação com parenteses para atribuir o operador "NOT"
+let nome = "João"; // É necessário isolar a operação com (parenteses) para atribuir o operador "NOT"
 if (!(nome === "João")) {
   console.log("Passou");
 } else {
