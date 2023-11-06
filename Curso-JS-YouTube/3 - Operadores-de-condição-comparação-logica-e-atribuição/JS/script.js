@@ -1,29 +1,29 @@
 // Aula 3 => Operadores de condição, comparação, logica e de atribuição
 // Operadores condicionais => "if", "else if", "else"
 if (true) {
-  console.log("Testando o 'if'"); // "if" => Executa um bloco de código se a condição for verdadeira
+  console.log("Testando o 'if'"); // "if" => Executa um bloco de código se a condição retornar "true"
 }
 
 if (false) {
-  console.log("Testando o 'if'"); // Se a condição for falsa, não será executado o bloco de código e continuara a execução do programa
+  console.log("Testando o 'if'"); // Se a condição retornar "false", não será executado o bloco de código e continuara a execução do programa
 }
 
 let idade = 13;
 if (idade >= 50) {
   console.log("Senior"); // Usando "if" para conferir se a idade é >=(maior ou igual) de 50
 } else if (idade > 18 && idade < 50) {
-  console.log("Adulto"); // "else if" => Usado para criar outro bloco de código a ser executado caso "if" dê falso, ignorando o "else"
+  console.log("Adulto"); // "else if" => Usado para criar outro bloco de código a ser executado caso "if" dê "false", ignorando o "else"
 } else if (idade < 18 && idade >= 14) {
   console.log("Adolescente"); // Pode-se adicionar quanto "else if" forem necessários
 } else {
-  console.log("Criança"); // "else" => Executado caso nenhuma da condições acima tenha sido verdadeira
+  console.log("Criança"); // "else" => Executado caso nenhuma da condições acima tenha retornado "true"
 }
 
 // Operadores de comparação
 // "=="(Igualdade) => Verifica se dois valores são iguais, sem levar em consideração o seu tipo
 // "==="(Igualdade estrita) => Compara se dois valores são estritamente iguais, levando em consideração o seu tipo
-// "!="(Diferente) => Testa se dois valores não são iguais, sem levar em consideração o seu tipo
-// "!=="(Diferente estrito) => Verifica se dois valores não são estritamente iguais, levando em consideração o seu tipo
+// "!="(Diferença) => Testa se dois valores não são iguais, sem levar em consideração o seu tipo
+// "!=="(Diferença estrita) => Verifica se dois valores não são estritamente iguais, levando em consideração o seu tipo
 // ">"(Maior que) => Compara se o valor à esquerda é maior que o valor à direita
 // "<"(Menor que) => Testa se o valor à esquerda é menor que o valor à direita
 // ">="(Maior ou igual a) => Verifica se o valor à esquerda é maior ou igual ao valor à direita
@@ -60,7 +60,7 @@ if (idade3 >= 50) {
   console.log("Criança");
 }
 
-// "||"(OR) => Retorna verdadeiro se pelo menos uma das operações retornarem "true"
+// "||"(OR) => Retorna "true" se pelo menos uma das operações retornarem "true"
 let idade4 = 13;
 if (idade4 >= 50) {
   console.log("Senior");

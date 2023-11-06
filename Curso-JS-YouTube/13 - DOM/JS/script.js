@@ -53,5 +53,3 @@ let novoElemento = document.createElement("span");
 
 novoElemento.appendChild(document.createTextNode("Meu 'span' inserido na 'div'"));
 meuContainer.appendChild(novoElemento);
-
-// Curso JavaScript #39 - Removendo elementos (removeChild) => https://youtu.be/pSkaIyRAt7w?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6
