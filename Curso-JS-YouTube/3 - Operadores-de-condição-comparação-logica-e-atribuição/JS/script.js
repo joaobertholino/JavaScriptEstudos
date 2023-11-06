@@ -1,4 +1,3 @@
-// Aula 3 => Operadores de condição, comparação, logica e de atribuição
 // Operadores condicionais => "if", "else if", "else"
 if (true) {
   console.log("Testando o 'if'"); // "if" => Executa um bloco de código se a condição retornar "true"
@@ -22,10 +21,10 @@ if (idade >= 50) {
 // Operadores de comparação
 // "=="(Igualdade) => Verifica se dois valores são iguais, sem levar em consideração o seu tipo
 // "==="(Igualdade estrita) => Compara se dois valores são estritamente iguais, levando em consideração o seu tipo
-// "!="(Diferença) => Testa se dois valores não são iguais, sem levar em consideração o seu tipo
+// "!="(Diferença) => Testa se dois valores não são iguais "iguais = true" e "diferentes = false", sem levar em consideração o seu tipo
 // "!=="(Diferença estrita) => Verifica se dois valores não são estritamente iguais, levando em consideração o seu tipo
-// ">"(Maior que) => Compara se o valor à esquerda é maior que o valor à direita
-// "<"(Menor que) => Testa se o valor à esquerda é menor que o valor à direita
+// ">"(Maior que) => Compara se o valor à esquerda é "maior" que o valor à direita
+// "<"(Menor que) => Compara se o valor à esquerda é "menor" que o valor à direita
 // ">="(Maior ou igual a) => Verifica se o valor à esquerda é maior ou igual ao valor à direita
 // "<="(Menor ou igual a) => Compara se o valor à esquerda é menor ou igual ao valor à direita
 let idade2 = 13;

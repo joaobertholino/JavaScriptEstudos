@@ -1,4 +1,3 @@
-// Aula 2 => Tipos de dados => "number", "string", "boolean", "null", "undefined", "object", "array"
 // "number" => Tipo numérico
 let meuNumber = 10;
 console.log(typeof meuNumber); // "typeof" => Retorna o tipo do dado declarado
@@ -64,7 +63,7 @@ console.log(sobrenome2);
 console.log(exHoisting); 
 var exHoisting = "Exemplo de Hoisting";
 
-// "object" => Guarda um conjunto de valores que são chamados de "propriedades" organizado por "chave: valor" para se utilizar posteriormente
+// "object" => Guarda um conjunto de valores que são chamados de "propriedades" organizado por "chave: valor" podendo ser utilizado posteriormente
 let meuObjeto = {
   nome: "Pedro",
   idade: 21,
@@ -80,10 +79,11 @@ console.log(`O meu nome é ${meuObjeto.nome}`); // Concatenando uma "string" com
 meuObjeto.nome = "João"; // Alterando o valor de uma propriedade do objeto
 console.log(meuObjeto.nome);
 
-meuObjeto.graduação = true; // Atribuindo outras propriedades ao mesmo objeto
+meuObjeto.graduação = "Analise e desenvolvimento de sistemas"; // Atribuindo outras propriedades ao mesmo objeto
+meuObjeto.statusGraduação = "Concluída"
 console.log(meuObjeto);
 
-console.log(`Meu nome é ${meuObjeto.nome}, tenho ${meuObjeto.idade} anos e sou ${meuObjeto.profissão}`); // Concatenando as propriedades do objeto "meuObjeto" formando uma frase
+console.log(`Meu nome é ${meuObjeto.nome}, tenho ${meuObjeto.idade} anos e sou ${meuObjeto.profissão} com formação em ${meuObjeto.graduação} já ${meuObjeto.statusGraduação}`); // Concatenando as propriedades do objeto "meuObjeto" formando uma frase
 
 // "array" => São considerados como objetos em JavaScript, porém servem como listas, ordenado por índice que se inicia em zero "0"
 let meuArray = ["joão", 21, "Estudante"]; // "array" => Sintaxe de [colchetes] || "object" => Sintaxe de {chaves}
