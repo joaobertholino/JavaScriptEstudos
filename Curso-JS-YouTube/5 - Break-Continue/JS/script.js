@@ -1,4 +1,5 @@
-// "Break" - "Continue" => Utilizados na maioria das vezes em loops
+// Utilizados na maioria das vezes em loops
+// "Break"
 for (let i = 10; i > 0; i--) {
   console.log(i);
   if (i === 5) {
@@ -7,6 +8,7 @@ for (let i = 10; i > 0; i--) {
 }
 console.log("Executou o 'break'");
 
+// "Continue"
 let x = 10;
 while (x < 100) {
   x += 10;

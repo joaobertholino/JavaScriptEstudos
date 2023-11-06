@@ -98,7 +98,7 @@ if (!(nome === "João")) {
   console.log("Não passou");
 }
 
-// Operadores de atribuição => Forma resumida da operação "x = x + y"
+// Operadores de atribuição
 // "=" => Usado para atribuir um valor a uma variável
 // "+=" => Adiciona o valor à direita ao valor da variável à esquerda e atribui o resultado à variável à esquerda
 // "-=" => Subtrai o valor à direita do valor da variável à esquerda e atribui o resultado à variável à esquerda

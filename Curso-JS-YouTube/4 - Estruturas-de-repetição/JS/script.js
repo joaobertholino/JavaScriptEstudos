@@ -19,7 +19,7 @@ for (y; y <= meuArray3.length; y++) {
   console.log(`Repetindo meu terceiro array: ${y}`); // "length" => "Comprimento" => Percorre todos os elementos de um array
 }
 
-// "while"
+// "while" => Forma mais antiga de se codificar uma estrutura de condição
 let x = 0;
 while (x <= 5) {
   console.log(`Testando repetição: ${x}`);
