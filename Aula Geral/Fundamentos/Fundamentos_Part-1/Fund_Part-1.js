@@ -207,4 +207,4 @@ console.log(natal);
 console.log(Math.PI); // Exibe o valor do PI
 console.log(Math.round(3.5)); // Arredonda valores
 console.log(Math.sqrt(4)); // Exibe o valor de uma raiz quadrada
-console.log(Math.pow(2, 3)); // Exibe o valor de um numero elevado a uma potencia
+console.log(Math.pow(2, 3)); // Exibe o valor de um numero elevado a uma potencia.
