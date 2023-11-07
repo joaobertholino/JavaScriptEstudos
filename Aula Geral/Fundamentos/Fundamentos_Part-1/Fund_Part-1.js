@@ -18,11 +18,17 @@ var booleano2 = false;
 console.log(typeof booleano2);
 
 // Objeto
-var meuObjeto = {};
+var meuObjeto = {
+  // Propriedades do objeto
+  nome: "João",
+  idade: 21,
+};
+console.log(meuObjeto);
 console.log(typeof meuObjeto);
 
 // Array
-var meuArray = [];
+var meuArray = ["elemento1", "elemento2", "elemento3"]; // Elementos indexáveis do array - inicia-se no índice zero "0"
+console.log(meuArray);
 console.log(typeof meuArray);
 
 // Null
@@ -37,7 +43,7 @@ console.log(typeof meuUndefined);
 var numero2 = 10; // "Number"
 console.log(typeof numero2);
 
-numero2 = "10" // String
+numero2 = "10"; // "String"
 console.log(typeof numero2);
 
 // Novas formas de declarar variáveis => "let" e "const"
@@ -60,17 +66,17 @@ console.log(x != y); // Verifica se valores são diferentes
 console.log(x === y); // Leva em consideração o tipo do dado analisado
 console.log(x !== y); // Verifica apenas se o tipo dos dados são diferentes
 
-// Operadores lógicos => "&& = and" "|| = or"
+// Operadores lógicos => "&&" = AND => "||" = OR
 console.log(10 > 5 && 5 > 10); // Verifica ambos os lados da operação
-console.log(10 > 5 || 5 > 10); // Caso o primeiro lado for verdadeiro, verifica apenas um lado da operação
+console.log(10 > 5 || 5 > 10); // Caso um dos lados der "true", verifica apenas um lado da operação
 
 // Conversão de tipos de dados
-const meuNumero2 = "123"; // String
-const meuNumeroConvertido = Number(meuNumero2); // Number() => Convertido para "number"
+const meuNumero2 = "123"; // "String"
+const meuNumeroConvertido = Number(meuNumero2); // Number() => Converte uma variável para "number"
 console.log(meuNumeroConvertido);
 console.log(typeof meuNumeroConvertido);
 
-// Estrutura de condição => "if", "else", "else if"
+// Estrutura de condição => "if", "else if", "else"
 const idade = 20;
 
 // Se a idade for menor que 13, será criança, se for menor que 20, adolescente e se for igual/maior que 20, será adulto
@@ -119,14 +125,14 @@ do {
   console.log("O valor de d é:" + d);
 } while (d < 10);
 
-// Funções => function nomeDaFunção(arg1, arg2) {código a ser reutilizado}
+// Funções => "function nomeDaFunção(arg1, arg2) {código a ser reutilizado}"
 function cumprimentar(nome) {
   console.log("Olá! " + nome);
 }
 
-cumprimentar("João"); // Invocando a função
+cumprimentar("João"); // Invocando a função atribuindo o valor "João" ao parâmetro "nome"
 
-// Arrow function => Forma de declarar função mais moderna
+// Arrow function => Forma moderna de declarar função
 const cumprimentar2 = (nome) => {
   console.log("Olá! " + nome);
 };
@@ -151,7 +157,7 @@ function testandoHoisting() {
   console.log("Deu Certo!");
 }
 
-// Truthy e Falsy => Reconhece alguns valores como "true" ou "false" mesmo que não seja um boolean
+// Truthy e Falsy => Reconhece alguns valores como "true" ou "false" mesmo que não seja um "boolean"
 const minhaVariável1 = ""; // Falsy
 
 if (minhaVariável1) {
@@ -168,16 +174,16 @@ if (minhaVariável2) {
   console.log("Falso");
 }
 
-// Array / Listas => Caracterizado pela abertura e fechamento de colchetes "[]"
-const números = [1, 2, 3, 4, 5];
-console.log(números);
-console.log(números[0]); // Imprime o primeiro valor do array, que tem o índice "0"
+// Array => Funciona como listas de elementos caracterizado pela abertura e fechamento de colchetes "[]"
+const númerosArray = ["elemento1", "elemento2", "elemento3", "elemento4", "elemento5"];
+console.log(númerosArray);
+console.log(`Meu elemento é: "${númerosArray[0]}"`); // Imprime no console o elemento de acordo com o índice declarado
 
-números.push(6); // Adicionando valores ao final no array
-console.log(números);
+númerosArray.push("elemento6"); // Adicionando elemento ao final no array
+console.log(númerosArray);
 
-números.pop(); // Remove o ultimo valor do array
-console.log(números);
+númerosArray.pop(); // Remove o ultimo elemento do array
+console.log(númerosArray);
 
 // Strings
 const minhaStringNova = "Olá, Mundo! ";
