@@ -19,4 +19,3 @@ console.log(isNaN("30")); // Não leva em consideração se o tipo de dado é um
 // "MAX_VALUE" - "MIN_VALUE" => Representam os valores máximos positivos e positivos mais próximos de zero que podem ser representados com precisão na linguagem
 console.log(Number.MAX_VALUE);
 console.log(Number.MIN_VALUE);
-

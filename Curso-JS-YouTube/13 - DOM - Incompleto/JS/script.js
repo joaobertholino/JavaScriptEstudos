@@ -53,3 +53,26 @@ let novoElemento = document.createElement("span");
 
 novoElemento.appendChild(document.createTextNode("Meu 'span' inserido na 'div'"));
 meuContainer.appendChild(novoElemento);
+
+// Removendo elementos
+let removeTitle = document.querySelector("#tituloId4"); // Elemento a ser removido
+removeTitle.remove(); // "remove" => Remove um elemento
+
+let meuContainer2 = document.querySelector("#container"); // Elemento pai
+let meuParagrafo = document.querySelector("#container p"); // Elemento filho
+meuContainer2.removeChild(meuParagrafo); // "removeChild" => Remove o elemento filho
+
+// Adicionando elemento
+let meuElemento = document.createElement("div"); // "createElement" => Criando elemento
+meuElemento.classList = "div-criada"; // "classList" => Atribui uma classe para o elemento
+
+let meuElemento3 = document.querySelector("#container");
+meuElemento3.appendChild(meuElemento); // "appendChild" => Adicionando elemento filho
+
+let meuElemento4 = document.createElement("div");
+meuElemento4.classList = "div-before";
+
+let elementInsertBefore = document.querySelector("#container .div-criada");
+meuContainer.insertBefore(meuElemento4, elementInsertBefore); // "insertBefore" => Insere um elemento antes de outro
+
+// Curso JavaScript #41 - Trocando elementos (replaceChild) => https://youtu.be/c5av-lPRt6A?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6 
