@@ -108,4 +108,75 @@ title3.style.backgroundColor = "yellow"; // "background-color: ;" => "background
 let title4 = document.querySelector("#tituloId3");
 title4.style.cssText = "color: blue; background-color: pink;"; // "cssText" => Permite adicionar vários estilos diferentes ao mesmo elemento, sem a necessidade de utilizar a notação de "camelCase"
 
-// Curso JavaScript #44 - Propriedades do document => https://youtu.be/peEiczr8LSI?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6
+// Propriedades do objeto "document"
+// "body" => O elemento <body> do documento.
+console.log(document.body);
+
+// "links" => Uma coleção de todos os elementos <link> no documento.
+console.log(document.links);
+console.log(document.links[0]); // Retorna um link com base no índice declarado
+document.links[0].textContent = "Alterando conteúdo textual do primeiro link"; // Alterando conteúdo do elemento
+
+// "URL" => A URL do documento.
+console.log(document.URL);
+
+// "title" => O título do documento.
+console.log(document.title);
+
+document.title = "Alterando o titulo da pagina"; // Alterando o titulo da pagina
+console.log(document.title);
+
+// Outras propriedades do objeto "document"
+// "activeElement" => O elemento atualmente ativo no documento. O elemento ativo é o elemento com o foco do teclado.
+// "all" => Uma coleção de todos os elementos no documento.
+// "anchors" => Uma coleção de todos os elementos <a> no documento.
+// "characterSet" => O conjunto de caracteres usado pelo documento.
+// "cookie" => O cookie associado ao documento.
+// "doctype" => O tipo de documento do documento.
+// "documentElement" => O elemento <html> do documento.
+// "domain" => O domínio do documento.
+// "embeds" => Uma coleção de todos os elementos <embed> no documento.
+// "forms" => Uma coleção de todos os formulários no documento.
+// "images" => Uma coleção de todas as imagens no documento.
+// "implementation" => Uma interface que fornece informações sobre a implementação do DOM no navegador.
+// "inputEncoding" => O código de codificação de entrada usado pelo documento.
+// "lastModified" => A data e hora em que o documento foi modificado pela última vez.
+// "location" => O objeto Location que representa a localização do documento.
+// "name" => O nome do documento.
+// "namespaces" => Uma coleção de todos os espaços de nomes no documento.
+// "origin" => A origem do documento.
+// "plugins" => Uma coleção de todos os plugins no documento.
+// "querySelector()" => Retorna um elemento que corresponde a uma expressão CSS.
+// "querySelectorAll()" => Retorna uma coleção de elementos que correspondem a uma expressão CSS.
+// "readyState" => O estado de carregamento do documento.
+// "referrer" => O URL do documento de referência.
+// "scripts" => Uma coleção de todos os elementos <script> no documento.
+// "styleSheets" => Uma coleção de todos os elementos <style> no documento.
+// "webkitHidden" => Indica se o documento está oculto.
+
+// Eventos => Mapeamento de ações dos usuários
+// "onload" => É um evento acionado quando uma página web é completamente carregada no navegador, permitindo que ações sejam executadas após o carregamento completo
+window.onload = function () {
+  console.log("Carregou o DOM"); // Só é executado após todo o HTML ter carregado
+};
+console.log("Carregou o JS");
+
+// "click" => Ocorre quando um elemento, como um botão ou um link, é clicado pelo usuário, desencadeando a execução de ações associadas a esse elemento
+let myButton1 = document.querySelector("#btn"); // Selecionando o elemento a receber o evento
+console.log(btn);
+
+btn.addEventListener("click", function () {
+  console.log(this);
+  this.style.cssText = "background-color: red; border: 1px solid black;";
+});
+
+// "dblclick" => Ocorre quando um elemento é clicado duas vezes rapidamente pelo usuário, desencadeando a execução de ações associadas a esse elemento após um duplo clique
+let myButton2 = document.querySelector("#btn"); // Selecionando o elemento a receber o evento
+console.log(btn);
+
+btn.addEventListener("dblclick", function () {
+  console.log(this);
+  this.style.cssText = "width: 70vw; height: 5vh;";
+});
+
+// Curso JavaScript #50 - Eventos mouseover e mouseout => https://youtu.be/U8-NbkaDJf0?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6
