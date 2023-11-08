@@ -62,7 +62,7 @@ let meuContainer2 = document.querySelector("#container"); // Elemento pai
 let meuParagrafo = document.querySelector("#container p"); // Elemento filho
 meuContainer2.removeChild(meuParagrafo); // "removeChild" => Remove o elemento filho
 
-// Adicionando elemento
+// Adicionando elementos
 let meuElemento = document.createElement("div"); // "createElement" => Criando elemento
 meuElemento.classList = "div-criada"; // "classList" => Atribui uma classe para o elemento
 
@@ -75,4 +75,37 @@ meuElemento4.classList = "div-before";
 let elementInsertBefore = document.querySelector("#container .div-criada");
 meuContainer.insertBefore(meuElemento4, elementInsertBefore); // "insertBefore" => Insere um elemento antes de outro
 
-// Curso JavaScript #41 - Trocando elementos (replaceChild) => https://youtu.be/c5av-lPRt6A?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6 
+// Trocando elementos
+let elemento1 = document.createElement("h3");
+elemento1.classList = "class-test"; // "classList" => Propriedade de objetos que fornece métodos para manipular as classes de um elemento HTML de maneira flexível e segura
+
+let texto = document.createTextNode("Texto inserido via DOM JavaScript");
+elemento1.appendChild(texto);
+console.log(elemento1);
+
+let title = document.querySelector("#tituloId1"); // Selecionando o elemento a ser trocado
+console.log(title);
+
+let father = title.parentNode; // "parentNode" => Selecionando o pai do elemento
+father.replaceChild(elemento1, title); // "replaceChild(novoElemento, antigoElemento)" => Substituindo elemento
+
+// Alterando atributos
+let title2 = document.querySelector("#tituloId2");
+title2.setAttribute("class", "classTest"); // "setAttribute" => Usado para definir o valor de um atributo de um elemento DOM. Se o atributo não existir, ele será criado
+console.log(title2);
+
+let btnTest = document.querySelector(".idTest");
+btnTest.setAttribute("disabled", "disabled"); // Desabilitando a função de "click" no botão
+
+let minhaLista = document.querySelector("#lista");
+minhaLista.removeAttribute("id"); // "removeAttribute" => Usado para remover um atributo de um elemento DOM
+
+// Alterando CSS com JavaScript
+let title3 = document.querySelector(".class-test"); // Selecionando elemento
+title3.style.color = "red"; // Atribuindo a cor "red" ao elemento, toda estilização feita via DOM será "inline", sendo priorizada na estilização
+title3.style.backgroundColor = "yellow"; // "background-color: ;" => "backgroundColor =" => Em JavaScript sempre se utiliza a notação de "camelCase"
+
+let title4 = document.querySelector("#tituloId3");
+title4.style.cssText = "color: blue; background-color: pink;"; // "cssText" => Permite adicionar vários estilos diferentes ao mesmo elemento, sem a necessidade de utilizar a notação de "camelCase"
+
+// Curso JavaScript #44 - Propriedades do document => https://youtu.be/peEiczr8LSI?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6
