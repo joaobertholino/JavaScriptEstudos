@@ -1,6 +1,7 @@
 // Utilizados na maioria das vezes em loops
 // "Break"
-for (let i = 10; i > 0; i--) {
+let i = 10;
+for (i; i > 0; i--) {
   console.log(i);
   if (i === 5) {
     break; // Encerrou a execução da instrução quando "i === 5"

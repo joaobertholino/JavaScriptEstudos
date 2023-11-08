@@ -5,7 +5,7 @@ function formaAntiga() {
 }
 formaAntiga(); // Invocando a função
 
-// Forma moderna de declarar funções => Arrow function
+// Forma moderna de declarar funções => "Arrow function"
 const formaModerna = () => {
   console.log("Executando função da forma moderna");
 };
