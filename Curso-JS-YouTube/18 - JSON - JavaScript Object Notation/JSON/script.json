@@ -1,0 +1,23 @@
+[
+  {
+    "nome": "João",
+    "idade": 21,
+    "empregado": true,
+    "detalhes_profissão": {
+      "profissão": "Programador",
+      "empresa": "Empresa X"
+    },
+    "hobbies": ["Estudar", "Programar"]
+  },
+
+  {
+    "nome": "Ellen",
+    "idade": 17,
+    "empregado": true,
+    "detalhes_profissão": {
+      "profissão": "Medica Socorrista",
+      "empresa": "Empresa X"
+    },
+    "hobbies": ["Estudar", "Ouvir musica"]
+  }
+]
