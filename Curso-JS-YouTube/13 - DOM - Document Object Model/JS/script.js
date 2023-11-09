@@ -179,4 +179,50 @@ btn.addEventListener("dblclick", function () {
   this.style.cssText = "width: 70vw; height: 5vh;";
 });
 
-// Curso JavaScript #50 - Eventos mouseover e mouseout => https://youtu.be/U8-NbkaDJf0?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6
+// "mouseover" => Acionado quando o ponteiro do mouse entra em um elemento. É usado para executar ações quando o usuário passa o mouse sobre um elemento
+let title5 = document.querySelector("#tituloId3"); // Selecionando o elemento
+
+title5.addEventListener("mouseover", function () {
+  this.style.backgroundColor = "red"; // Ao passar o mouse por cima do elemento, irá alterar a cor do background para "red"
+});
+
+// Fazendo com que outros conteúdos apareçam na tela ao passar com o mouse por cima 
+title5.addEventListener("mouseover", function () {
+  let legenda = document.querySelector("#hide");
+  legenda.classList.remove("subtitle")
+});
+
+// "mouseout" => Acionado quando o ponteiro do mouse sai de um elemento. É usado para executar ações quando o usuário remove o mouse de um elemento
+title5.addEventListener("mouseout", function () {
+  this.style.backgroundColor = "pink" // Ao retirar o mouse de cima do elemento, irá alterar a cor do background para "pink"
+});
+
+// Fazendo com que outros conteúdos sumam da tela ao remover o mouse de cima de um elemento
+title5.addEventListener("mouseout", function () {
+  let legenda = document.querySelector("#hide");
+  legenda.classList.add("subtitle");
+});
+
+// "keydown" => Acionado quando uma tecla é pressionada no teclado
+document.addEventListener("keydown", function (event) {
+  // Apenas executa o bloco condicional de a tecla pressionada for "Enter"
+  if (event.key === "Enter") {
+    console.log(`Pressionou a tecla: ${event.key}`);
+  };
+
+  console.log("teste"); // Retorna no console sempre que qualquer tecla é pressionada
+  console.log(event); // Retorna no console todas a informações do evento
+  console.log(event.key); // Retorna no console apenas qual tecla foi pressionada
+});
+
+// "keyup" => Acionado quando uma tecla é liberada no teclado
+document.addEventListener("keyup", function (event2) {
+  if (event2.key === "Enter") {
+    console.log(`Soltou a tecla: ${event2.key}`);
+  };
+});
+
+// "keypress" => Acionado quando uma tecla é pressionada e liberada no teclado
+document.addEventListener("keypress", function (event3) {
+  console.log(`Pressionou e liberou a tecla: ${event3.key}`);
+});
