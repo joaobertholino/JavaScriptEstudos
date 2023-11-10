@@ -1,23 +1,23 @@
 // var nomeDaVariável = "valorDaVariável"
 var nomeDaVariável = "Olá mundo!";
-console.log(nomeDaVariável); // Imprime um valor no console
+console.log(nomeDaVariável); // "console.log" => Imprime um valor no console
 
 // Variáveis e tipos de dados
-// Number
+// "number"
 var meuNumero = 10;
 console.log(meuNumero);
 console.log(meuNumero + 15); // Concatenação
 console.log(typeof meuNumero); // "typeof" => Faz a checagem sobre qual tipo de dado esta armazenado
 console.log("10" + 5); // Uso de "" em valor numérico(number) é interpretado como texto(string)
 
-// Boolean
+// "boolean"
 var booleano1 = true;
 console.log(booleano1);
 
 var booleano2 = false;
 console.log(typeof booleano2);
 
-// Objeto
+// "object"
 var meuObjeto = {
   // Propriedades do objeto
   nome: "João",
@@ -26,20 +26,20 @@ var meuObjeto = {
 console.log(meuObjeto);
 console.log(typeof meuObjeto);
 
-// Array
+// "array"
 var meuArray = ["elemento1", "elemento2", "elemento3"]; // Elementos indexáveis do array - inicia-se no índice zero "0"
 console.log(meuArray);
 console.log(typeof meuArray);
 
-// Null
+// "null"
 var meuNull = null;
 console.log(typeof meuNull);
 
-// Undefined
+// "undefined"
 var meuUndefined = undefined;
 console.log(typeof meuUndefined);
 
-// Tipagem fraca => Uma variável pode ter o seu tipo alterado ao logo do código
+// Tipagem fraca => Uma variável pode ter o seu tipo alterado ao logo do código, a não ser variáveis declaradas com "const"
 var numero2 = 10; // "Number"
 console.log(typeof numero2);
 
@@ -50,25 +50,31 @@ console.log(typeof numero2);
 let x = 10;
 console.log(typeof x);
 
-// Use "const" para garantir que os valores não serão alterados
+// Use "const" para garantir que os dados da variável não serão alterados
 const y = 15;
 console.log(x, y);
 
 // Operadores aritméticos
-console.log(x + y); // Soma
-console.log(x - y); // Subtração
-console.log(x * y); // Multiplicação
-console.log(x / y); // Divisão
+console.log(x + y); // "+" => Soma
+console.log(x - y); // "-" => Subtração
+console.log(x * y); // "*" => Multiplicação
+console.log(x / y); // "/" => Divisão
 
-//Operadores de comparação
-console.log(x == y); // Verifica se valores são iguais
-console.log(x != y); // Verifica se valores são diferentes
-console.log(x === y); // Leva em consideração o tipo do dado analisado
-console.log(x !== y); // Verifica apenas se o tipo dos dados são diferentes
+// Operadores de comparação
+console.log(x == y); // "==" => Verifica apenas se valores são iguais
+console.log(x != y); // "!=" => Verifica apenas se valores são diferentes
+console.log(x === y); // "===" => Verifica se os valores e os tipos de dados são iguais
+console.log(x !== y); // "!==" => Verifica se os valores e os tipos de dados são diferentes
 
-// Operadores lógicos => "&&" = AND => "||" = OR
+// Operadores lógicos
+// "&&" => AND
+// "//" => OR
+// "!" => NOT
 console.log(10 > 5 && 5 > 10); // Verifica ambos os lados da operação
 console.log(10 > 5 || 5 > 10); // Caso um dos lados der "true", verifica apenas um lado da operação
+
+const myNot = 10;
+console.log(!(myNot===10)); // Inverte o valor de retorno, por exemplo: "true" => "false" / "false" => "true"
 
 // Conversão de tipos de dados
 const meuNumero2 = "123"; // "String"
