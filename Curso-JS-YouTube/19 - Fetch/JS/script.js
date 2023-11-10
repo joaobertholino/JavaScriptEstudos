@@ -82,9 +82,16 @@ const createComment = (comment) => {
   commentsContainer.appendChild(div);
 };
 
-const postComment = (comment) => {
-  // https://youtu.be/qIGYM4S8x50?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6 - AULA SOBRE FETCH - 40:50
-}
+const postComment = async (comment) => {
+  const response = await fetch(`${url}/${postId}/comments`, {
+    method: "POST",
+    body: comment,
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
+  const data = await response.json();
+};
 
 if (!postId) {
   getAllPosts();
