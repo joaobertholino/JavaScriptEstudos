@@ -3,10 +3,10 @@
 // Se a requisição for "GET" é preciso passar apenas a URL do recurso que esta sendo resgatado da API
 // Caso seja outro verbo, podemos configurar a requisição com: "method", "body", "headers"
 
-// Declaração de uma constante chamada url que armazena a URL base para a API que será consumida.
+// Declaração de uma constante chamada "url" que armazena a URL base para a API que será consumida.
 const url = "https://jsonplaceholder.typicode.com/posts";
 
-// Seleção de elementos HTML usando o método document.querySelector. Cada uma dessas constantes representa um elemento do DOM associado a um determinado ID.
+// Seleção de elementos HTML usando o método "document.querySelector". Cada uma dessas constantes representa um elemento do DOM associado a um determinado ID.
 const loadingElement = document.querySelector("#loading"); 
 const postsContainer = document.querySelector("#posts-container");
 const postPage = document.querySelector("#post");
