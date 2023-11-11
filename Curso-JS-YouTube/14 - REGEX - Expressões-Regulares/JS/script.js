@@ -10,6 +10,15 @@
 // "^" => No início de uma regex, indica o início da linha
 // "$" => No final de uma regex, indica o final da linha
 
+// Modificadores
+// "i" => Faz com que a correspondência seja insensível a maiúsculas/minúsculas.
+// "g" => Faz com que a correspondência seja global.
+// "m" => Modifica o comportamento de caracteres âncora ^ e $ para corresponderem ao início e ao final de cada linha.
+// "s" => Faz com que o ponto (.) corresponda a qualquer caractere, incluindo quebras de linha.
+// "u" => Habilita o suporte a Unicode.
+// "y" => Realiza uma correspondência "pegajosa" apenas no início da string.
+// "[n]" => Especifica o número de vezes que a correspondência deve ocorrer.
+
 // Notação Literal => "const regexLiteralNotation = /pattern/;"
 // Removendo caracteres
 const minhaRegex = (string) => {
@@ -24,7 +33,7 @@ const minhaRegex2 = (string) => {
 };
 console.log(minhaRegex2("Olá, mundo!"));
 
-// "RegExp" => Cria uma REGEX utilizando um construtor "RegExp"
+// "RegExp" => Cria uma REGEX utilizando o construtor "RegExp"
 // Removendo caracteres com "RegExp"
 const minhaRegex3 = (string) => {
   const pattern = new RegExp("[^a-zA-Z0-9]", "g"); // Criando a expressão regular usando o construtor RegExp

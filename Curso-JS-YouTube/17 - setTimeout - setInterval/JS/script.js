@@ -3,14 +3,14 @@ console.log("Código antes do SetTimeout"); // Código síncronos
 
 // "SetTimeout" => Permite a execução de uma função ou trecho de código após um atraso de tempo especificado
 // Código assíncrono => Será executado somente a após o tempo declarado, não interferindo na execução do resto do código
-setTimeout(function () {
+setTimeout(() => {
   console.log("Testando o 'setTimeout'");
 }, 200000); // "1s" = "1000ms"
 
 console.log("Código depois do SetTimeout"); // Código síncronos
 
 // "setInterval" =>  Executa repetidamente uma função ou trecho de código em intervalos regulares de tempo especificados
-setInterval(function () {
+setInterval(() => {
   console.log("Testando o 'setInterval'");
 }, 100000); // Caso seja definido um tempo muito curto e ações muito extensas, ocorrera um consumo de memoria muito grande podendo travar o navegador do usuário
 
@@ -18,7 +18,7 @@ setInterval(function () {
 let x = 0;
 
 // Encapsulando o "setTimeout" em uma variável chamada "myTimer" para poder possar ele como parâmetro para o "clearTimeout()"
-let myTimer = setTimeout(function () {
+let myTimer = setTimeout(() => {
   console.log("O 'x' é zero");
 }, 1500);
 
@@ -31,12 +31,12 @@ if (x > 0) {
 }
 
 // Encapsulando o "setInterval" em uma variável chamada "myInterval" para poder possar ele como parâmetro para o "clearInterval()"
-let myInterval = setInterval(function () {
+let myInterval = setInterval(() => {
   console.log("imprimindo 'setInterval'");
 }, 500);
 
 // Interrompe a execução repetitiva de uma função programada para rodar em intervalos regulares usando "setInterval"
-setTimeout(function () {
+setTimeout(() => {
   console.log("Não precisamos mais repetir!");
   clearInterval(myInterval);
 }, 1500);

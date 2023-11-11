@@ -1,5 +1,5 @@
 // "length" => Esta não é uma função, mas uma propriedade que retorna o número de elementos em um array.
-let myArray1 = [1, 2, 3, 4, 5];
+const myArray1 = [1, 2, 3, 4, 5];
 console.log(myArray1.length);
 
 // "push(element1, element2, ...)" => Adiciona um ou mais elementos ao final do array e retorna o novo comprimento do array.
@@ -25,13 +25,13 @@ myArray1.shift();
 console.log(myArray1);
 
 // Acessar o ultimo elemento
-let lastArray = myArray1[myArray1.length - 1];
+const lastArray = myArray1[myArray1.length - 1];
 console.log(lastArray);
 
 // "Array.isArray(value)" => Este é um método que verifica se o valor passado como argumento é um array. Ele retorna true se o valor for um array e false se não for.
 console.log(Array.isArray(myArray1));
 
-// "splice(start, deleteCount, item1, item2, ...)" => Altera o conteúdo de um array, removendo, substituindo ou adicionando elementos.
+// "splice(start, deconsteCount, item1, item2, ...)" => Altera o conteúdo de um array, removendo, substituindo ou adicionando elementos.
 myArray1.splice(2, 0, "Elemento adicionado entre outros elementos");
 console.log(myArray1);
 
@@ -45,7 +45,7 @@ console.log(myArray1.indexOf(3));
 console.log(myArray1.lastIndexOf(3));
 
 // "join(separator)" => Converte os elementos de um array em uma string, separados pelo caractere especificado.
-let myArray2 = ["O", "rato", "roeu", "a", "roupa", "do", "rei", "de", "Roma"];
+const myArray2 = ["O", "rato", "roeu", "a", "roupa", "do", "rei", "de", "Roma"];
 console.log(myArray2.join(" "));
 
 // "reverse()" => Inverte a ordem dos elementos no array.

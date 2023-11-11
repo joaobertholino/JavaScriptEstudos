@@ -1,3 +1,6 @@
+// "async" => Uma palavra-chave usada para declarar uma função que retorna uma Promise, permitindo a execução de código assíncrono de forma síncrona.
+// "await" => Uma palavra-chave usada dentro de funções assíncronas para pausar a execução até que uma Promise seja resolvida, simplificando a escrita de código assíncrono.
+
 // Sintaxe
 const primeiraFunção = () => {
   return new Promise((resolve) => {
@@ -13,7 +16,6 @@ const segundaFunção = async () => {
   await primeiraFunção();
   console.log("Terminou");
 };
-
 segundaFunção();
 
 // Contexto real
@@ -33,7 +35,6 @@ const showUserName = async (id) => {
     console.log(`Erro: ${error}`);
   }
 };
-
 showUserName(3);
 
 

@@ -1,4 +1,4 @@
-// "Callback" => É uma função que é passada como argumento para outra função e é executada após a conclusão da função principal
+// "Callback" => Uma função que é passada como argumento para outra função e é executada após a conclusão de uma operação assíncrona ou em resposta a um evento.
 const exibir = (num) => {
   console.log(`A operação resultou em: ${num}`);
 };
