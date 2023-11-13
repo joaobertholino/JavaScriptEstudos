@@ -49,7 +49,7 @@ console.log(mySplit2);
 // "endsWith(searchString)" => Verifica se a string termina com a substring especificada e retorna true ou false.
 // "substring(start, end)" => Semelhante a slice, mas não aceita índices negativos. Extrai uma parte da string com base nos índices de início e fim.
 // "substr(start, length)" => Extrai uma parte da string começando pelo índice especificado e com o comprimento especificado.
-// "padStart(length, padString)" => Compconsta a string com o caractere de preenchimento (ou espaços) no início até atingir o comprimento especificado.
-// "padEnd(length, padString)" => Compconsta a string com o caractere de preenchimento (ou espaços) no final até atingir o comprimento especificado.
+// "padStart(length, padString)" => Completa a string com o caractere de preenchimento (ou espaços) no início até atingir o comprimento especificado.
+// "padEnd(length, padString)" => Completa a string com o caractere de preenchimento (ou espaços) no final até atingir o comprimento especificado.
 // "match(regexp)" => Procura a string por uma expressão regular e retorna um array de correspondências.
 // "search(regexp)" => Procura a string por uma expressão regular e retorna o índice da primeira correspondência encontrada.
