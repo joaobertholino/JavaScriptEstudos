@@ -109,20 +109,19 @@ let x = 1;
 let y = 2;
 
 // Adição
-console.log((x = x + y));
-console.log((x += y));
+console.log(x + y);
 
 // Subtração
-console.log((x -= y));
+console.log(x - y);
 
 // Multiplicação
-console.log((x *= y));
+console.log(x * y);
 
 // Divisão
-console.log((x /= y));
+console.log(x / y);
 
 // Resto da divisão
-console.log((x %= y));
+console.log(x % y);
 
 // Expoente
-console.log((x **= y));
+console.log(x ** y);
