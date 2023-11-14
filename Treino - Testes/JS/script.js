@@ -121,3 +121,6 @@ const permissãoVoto2 = (idade) => {
       console.log("Não poderá votar");
   }
 }
+console.log(permissãoVoto2(21));
+console.log(permissãoVoto2(17));
+console.log(permissãoVoto2(12));
