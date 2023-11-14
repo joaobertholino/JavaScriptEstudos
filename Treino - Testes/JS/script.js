@@ -108,3 +108,16 @@ const permissãoVoto = (idade) => {
 permissãoVoto(21);
 permissãoVoto(17);
 permissãoVoto(12);
+
+const permissãoVoto2 = (idade) => {
+  switch (idade) {
+    case idade >= 18 && idade < 70:
+      console.log("Voto obrigatório");
+      break;
+    case idade >= 16 && idade < 18:
+      console.log("Voto facultativo");
+      break;
+    default:
+      console.log("Não poderá votar");
+  }
+}
