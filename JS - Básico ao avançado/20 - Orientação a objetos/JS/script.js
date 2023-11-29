@@ -7,46 +7,38 @@ class Person {
     this.lastName = lastName;
     this.age = age;
   }
-
   // Criando métodos para essa classe => Método para pegar o "firstName" e o "lastName"
   getFullName() {
     return `${this.firstName} ${this.lastName}`;
   }
-
   // Métodos estáticos não necessitam que a classe seja instanciada, pelo fato de não utilizarem nenhuma propriedade da classe
   static speak() {
     return "Oiii :)";
   }
 }
-
 // Executando um método estático antes de instanciar a classe
 console.log(Person.speak());
-
 // Instanciando a classe "Person"
 const person = new Person("Ellen", "Sthefane", 17);
 console.log(person);
 console.log(person.getFullName());
 
-
-// "Herança" => Herdar propriedades de uma classe em outra classe
+// "Herança" => Herdar propriedades de uma classe(pai) em outra classe(filho)
 class Animal {
   constructor(name) {
     this.name = name;
   }
-
-  // Definindo um método chamado "speak" para a classe "Animal"
+  // Definindo um método chamado "speak" para a classe pai "Animal"
   speak() {
     return `${this.name} made some noise!`;
   }
 }
-
-// Criando a classe "Cat" que estende a classe "Animal" 
+// Criando a classe filho "Cat" que estende a classe pai "Animal" 
 class Cat extends Animal {
   constructor(name) {
     super(name);
   }
-
-  // Sobrescrevendo o método "speak" herdado da classe "Animal"
+  // Sobrescrevendo o método "speak" herdado da classe pai "Animal"
   speak() {
     return `${this.name} meow!`;
   }
@@ -55,7 +47,6 @@ class Cat extends Animal {
 // Instanciando a classe "Animal"
 const animal = new Animal("Boris");
 console.log(animal.speak());
-
 // Instanciando a classe "Cat"
 const cat = new Cat("Romeo");
 console.log(cat.speak());

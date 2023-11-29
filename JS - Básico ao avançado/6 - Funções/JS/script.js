@@ -37,3 +37,19 @@ const somaDois = soma(5, 5);
 console.log(somaDois);
 
 console.log(soma(12, 12)); // Executa a função "soma" e retorna o valor no console
+
+// "IIFE" => Immediately Invoked Function Expression
+// Sintaxe de "Sel-Executing Anonymous Function" => Não compatível com arrow function
+(function selExecutingOne() {
+  console.log("Sel-Executing Anonymous Function");
+  // Variáveis declaradas dentro do IIFE não podem ser acessadas fora do mesmo
+  const escopoLocal = 10;
+})();
+
+// Ao atribuir o IIFE á uma variável, é possível acessar o seu valor fora de seu escopo
+const iifeReturn = (function selExecutingTwo() {
+  console.log("Sel-Executing Anonymous Function");
+  const escopoLocal = 20;
+  return escopoLocal;
+})();
+console.log(iifeReturn);

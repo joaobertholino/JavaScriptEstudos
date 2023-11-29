@@ -39,3 +39,20 @@ while (j <= 6) {
   console.log(nome[j]);
   j++;
 }
+
+// Loop For/Of
+// Array com estado brasileiros
+const listaDeEstados = ["RJ", "SP", "MG"];
+// Iniciando um loop "for" que itera sobre a lista "listaDeEstados"
+for (let estado of listaDeEstados) {
+  // A cada iteração do loop, a variável "estado" recebe um dos estados da lista
+  console.log(`${estado} é um estado brasileiro`);
+}
+
+// Declarando um variável do tipo string chamada "myName"
+const myName = "João Bertholino";
+// Iniciando um loop "for" para iterar sobre a string "myName"
+for (let name of myName) {
+  // A cada iteração do loop, a variável "name" recebe um dos caracteres da string
+  console.log(name.toUpperCase());
+}
