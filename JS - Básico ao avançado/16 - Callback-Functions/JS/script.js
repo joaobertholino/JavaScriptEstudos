@@ -8,7 +8,7 @@ const greeting = (name) => {
 // Declarando uma função chamada "processUserInput" que recebe um parâmetro chamado "callback"
 const processUserInput = (callback) => {
   // Exibe um prompt onde sera inserido o nome que sera atribuído a variável chamada "name"
-  // const name = prompt("Digite seu nome");
+  const name = prompt("Digite seu nome");
   // Chamando a função de retorno "callback" passando o valor de "name" como argumento
   callback(name);
 };

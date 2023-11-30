@@ -13,12 +13,21 @@ const nomeDaFunção2 = (a, b) => {
 };
 nomeDaFunção2(5, 10);
 
+// Arrow Function multiLine
+const myArrowMultiLine = () => {
+  return "Testando arrow function em sintaxe de varias linhas!";
+};
+console.log(myArrowMultiLine());
+
+// Arrow Functions oneLine
+const myArrowOneLine = () => "Testando arrow function em sintaxe de um linha!";
+console.log(myArrowOneLine());
+
 // Argumentos
 const dizerNome = (nome, idade) => {
   console.log(`O nome é: ${nome} e a idade é: ${idade}`);
 };
 dizerNome("Ellen", 17);
-dizerNome("Nicolas", 19);
 dizerNome("João", 21);
 
 const databaseName = "Pedro";
@@ -33,23 +42,25 @@ const soma = (a, b) => {
 const somaUm = soma(3, 3); // Fora da função, uma variável chamada "somaUm" é declarada. Ela chama a função "soma" com os argumentos "3" e "3". Isso significa que "a" recebe "3" e "b" recebe "3" quando a função é chamada
 console.log(somaUm);
 
-const somaDois = soma(5, 5);
-console.log(somaDois);
-
 console.log(soma(12, 12)); // Executa a função "soma" e retorna o valor no console
+
+// Atribuindo uma função anônima a uma variável
+const myFunction = function () {
+  return "Função atribuída a variável!";
+};
+console.log(myFunction()); // Executando a função por meio da variável e imprimindo no console
 
 // "IIFE" => Immediately Invoked Function Expression
 // Sintaxe de "Sel-Executing Anonymous Function" => Não compatível com arrow function
-(function selExecutingOne() {
-  console.log("Sel-Executing Anonymous Function");
-  // Variáveis declaradas dentro do IIFE não podem ser acessadas fora do mesmo
-  const escopoLocal = 10;
-})();
+// Variáveis declaradas dentro do escopo de uma IIFE não poderão ser acessadas de fora do escopo da mesma, a não ser que essa IIFE seja atribuída a uma variável
+(function selExecutingOne(x, y) {
+  console.log("Sel-Executing Anonymous Function One");
+  console.log(x * y);
+})(2, 4); // Passando os valores dos parâmetros de "x" e "y"
 
-// Ao atribuir o IIFE á uma variável, é possível acessar o seu valor fora de seu escopo
-const iifeReturn = (function selExecutingTwo() {
-  console.log("Sel-Executing Anonymous Function");
-  const escopoLocal = 20;
-  return escopoLocal;
-})();
+// Atribuindo uma IIFE a uma variável chamada "iifeReturn"
+const iifeReturn = (function selExecutingTwo(x, y) {
+  console.log("Sel-Executing Anonymous Function Two");
+  return x + y;
+})(2, 2); // Passando os valores dos parâmetros "x" e "y"
 console.log(iifeReturn);
