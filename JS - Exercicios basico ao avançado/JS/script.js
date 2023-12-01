@@ -112,6 +112,8 @@ const calcMediaTwo = (notaOne, notaTwo) => {
 };
 calcMediaTwo(4.9, 5);
 
+console.clear(); // Limpando console
+
 // Exercício 11 => Escreva um programa que verifica se a pessoa tem idade para votar ou não
 const votoOne = (num) => {
   if (num < 16) {
@@ -234,3 +236,256 @@ const leapYearTwo = (year) => {
 leapYearTwo(2022);
 
 // Exercício 15 => Escreva um programa que retorna se uma palavra é ou não um palíndromo
+const políndromoOne = (word) => {
+  let invertedWord = word.split("").reverse().join("");
+
+  if (word === invertedWord) {
+    console.log(`${word} é um políndromo`);
+  } else {
+    console.log(`${word} não é um políndromo`);
+  }
+};
+políndromoOne("Ellen");
+
+const políndromoTwo = (word) => {
+  let invertedWord = word.split("").reverse().join("");
+
+  switch (true) {
+    case word === invertedWord:
+      console.log(`${word} é um políndromo`);
+      break;
+    default:
+      console.log(`${word} não é um políndromo`);
+      break;
+  }
+};
+políndromoTwo("arara");
+
+console.clear(); // Limpando console
+
+// Exercício 16 => Escreva um programa onde receberá três números como argumentos e retornara o maior entre eles
+const highNumberOne = (x, y, z) => {
+  if (x > y && x > z) {
+    console.log(`${x}: Maior número!`);
+  } else if (y > x && y > z) {
+    console.log(`${y}: Maior número!`);
+  } else {
+    console.log(`${z}: Maior número!`);
+  }
+};
+highNumberOne(5.23242, 5.243424, 5.23982);
+
+const highNumberTwo = (x, y, z) => {
+  switch (true) {
+    case x > y && x > z:
+      console.log(`${x}: Maior número!`);
+      break;
+    case y > x && y > z:
+      console.log(`${y}: Maior número!`);
+      break;
+    default:
+      console.log(`${z}: Maior número!`);
+      break;
+  }
+};
+highNumberTwo(5.23242, 5.23244, 5.23243);
+
+// Exercício 17 => Escreva um programa de retorna se um numero é par ou ímpar
+const parOuImparOne = (x) => {
+  const result = x % 2;
+
+  if (result === 0) {
+    console.log(`${x} é par!`);
+  } else {
+    console.log(`${x} é ímpar!`);
+  }
+};
+parOuImparOne(13);
+
+const parOuImparTwo = (x) => {
+  const result = x % 2;
+
+  switch (true) {
+    case result === 0:
+      console.log(`${x} é par!`);
+      break;
+    default:
+      console.log(`${x} é ímpar!`);
+      break;
+  }
+};
+parOuImparTwo(18);
+
+// Exercício 18 => Escreva um programa que retorne se um pessoa pode dirigir com base na idade
+const permissionToDriveOne = (x) => {
+  if (x >= 18) {
+    console.log(`Pode dirigir!`);
+  } else {
+    console.log(`Não pode dirigir!`);
+  }
+};
+permissionToDriveOne(17);
+
+const permissionToDriveTwo = (x) => {
+  switch (true) {
+    case x >= 18:
+      console.log(`Pode dirigir!`);
+      break;
+    default:
+      console.log(`Não pode dirigir!`);
+  }
+};
+permissionToDriveTwo(21);
+
+// Execício 19 => Escreva um programa que retorne se um numero esta dentro de um intervalo, essa função receberá três números como argumentos onde o primeiro será o limite mínimo, o segundo será o numero a ser verificado e o terceiro será o limite máximo
+const intervalOne = (x, y, z) => {
+  if (y >= x && y <= z) {
+    console.log(`${y} está dentro do limite de intervalo!`);
+  } else {
+    console.log(`${y} não esta dentro do intervalo!`);
+  }
+};
+intervalOne(0, 5, 10);
+
+const intervalTwo = (x, y, z) => {
+  switch (true) {
+    case y >= x && y <= z:
+      console.log(`${y} está dentro do limite de intervalo!`);
+      break;
+    default:
+      console.log(`${y} não esta dentro do intervalo!`);
+      break;
+  }
+};
+intervalTwo(50, 110, 100);
+
+// Exercício 20 => Escreva um programa onde ao receber como argumento um nota de um aluno, retornara uma classificação para nota
+const classificationNoteOne = (x) => {
+  if (x <= 10 && x >= 8) {
+    console.log(`Ótima nota!`);
+  } else if (x <= 7 && x >= 6) {
+    console.log(`Nota mediana!`);
+  } else {
+    console.log(`Nota ruim!`);
+  }
+};
+classificationNoteOne(1);
+
+const classificationNoteTwo = (x) => {
+  switch (true) {
+    case x <= 10 && x >= 8:
+      console.log(`Ótima nota!`);
+      break;
+    case x <= 7 && x >= 6:
+      console.log(`Nota mediana!`);
+      break;
+    default:
+      console.log(`Nota ruim!`);
+  }
+};
+classificationNoteTwo(9);
+
+console.clear(); // Limpando console
+
+// Exercício 21 => Escreva um programa que retornara a estação climática com base no mês
+const stationOne = (x) => {
+  if (x < 3 || x === 12) {
+    console.log(`O mês ${x} é verão!`);
+  } else if (x < 6) {
+    console.log(`O mês ${x} é outono!`);
+  } else if (x < 9) {
+    console.log(`O mês ${x} é inverno!`);
+  } else {
+    console.log(`O mês ${x} é primavera!`);
+  }
+};
+stationOne(9);
+
+const stationTwo = (x) => {
+  switch (true) {
+    case x < 3 || x === 12:
+      console.log(`O mês ${x} é verão!`);
+      break;
+    case x < 6:
+      console.log(`O mês ${x} é outono!`);
+      break;
+    case x < 9:
+      console.log(`O mês ${x} é inverno!`);
+      break;
+    default:
+      console.log(`O mês ${x} é primavera!`);
+      break;
+  }
+};
+stationTwo(7);
+
+// Exercício 22 => Escreva um programa onde será retornado o numero de dias de um mês
+const daysOfMonth = (x) => {
+  switch (x) {
+    case 2:
+      console.log(`28 ou 29 dias!`);
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      console.log(`30 dias!`);
+      break;
+    default:
+      console.log(`31 dias!`);
+  }
+};
+daysOfMonth(12);
+
+// Exercício 23 => Escreva um programa onde receberá um cor do semáforo "Red", "Green", "Yellow" e retornara uma mensagem do significado desse cor
+const semáforoOne = (x) => {
+  if (x === "Red") {
+    console.log(`${x}: Pare!`);
+  } else if (x === "Green") {
+    console.log(`${x}: Avance!`);
+  } else if (x === "Yellow") {
+    console.log(`${x}: Atenção!`);
+  } else {
+    console.log(`${x}: Essa cor não pertence a um semáforo!`);
+  }
+};
+semáforoOne("Red");
+semáforoOne("Yellow");
+semáforoOne("Green");
+
+const semáforoTwo = (x) => {
+  switch (x) {
+    case "Red":
+      console.log(`${x}: Pare!`);
+      break;
+    case "Green":
+      console.log(`${x}: Avance!`);
+      break;
+    case "Yellow":
+      console.log(`${x}: Atenção!`);
+      break;
+    default:
+      console.log(`${x}: Essa cor não pertence a um semáforo!`);
+      break;
+  }
+};
+semáforoTwo("Red");
+semáforoTwo("Yellow");
+semáforoTwo("Green");
+
+// Exercício 24 => Programe um loop onde será percorrido os números de 1 a 10 e imprimira cada um no console
+let x = 1;
+
+for (x; x <= 10; x++) {
+  console.log(`${x}`);
+}
+
+// Exercício 25 => Utilizando um laço while, imprima no console os números de 1 a 10 e ordem decrescente
+let y = 10;
+
+while (y >= 1) {
+  console.log(`${y}`);
+  y--;
+}
+
+console.clear(); // Limpando console
