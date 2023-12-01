@@ -489,3 +489,20 @@ while (y >= 1) {
 }
 
 console.clear(); // Limpando console
+
+// Exercício 26 => Utilizando um laço do-while, imprima todos os números ímpares de 1 a 20
+let z = 1;
+
+do {
+  if (z % 2 != 0) {
+    console.log(z);
+  }
+  z++
+} while (z <= 20);
+
+// Exercício 27 => Utilizando um laço for, imprima a tabuada do 5
+let fiveTable = 1;
+
+for (fiveTable; index <= 10; index++) {
+  console.log(`5 x`);
+}
