@@ -497,12 +497,22 @@ do {
   if (z % 2 != 0) {
     console.log(z);
   }
-  z++
+  z++;
 } while (z <= 20);
 
 // Exercício 27 => Utilizando um laço for, imprima a tabuada do 5
 let fiveTable = 1;
 
-for (fiveTable; index <= 10; index++) {
-  console.log(`5 x`);
+for (fiveTable; fiveTable <= 10; fiveTable++) {
+  console.log(`5 x ${fiveTable} = ${5 * fiveTable}`);
 }
+
+// Exercício 28 => Utilizando um laço while, calcule e imprima a soma de todos os números de 1 a 100
+let addition = 1;
+let sum = 0;
+
+while (addition <= 100) {
+  sum += addition;
+  addition++;
+}
+console.log(`A soma de todos os números de 1 a 100 é: ${sum}`);
