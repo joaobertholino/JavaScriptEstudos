@@ -516,3 +516,13 @@ while (addition <= 100) {
   addition++;
 }
 console.log(`A soma de todos os números de 1 a 100 é: ${sum}`);
+
+// Exercício 29 => Usando um laço do-while, imprima todos os números pares de 1 a 100
+let j = 1;
+
+do {
+  if (j % 2 == 0) {
+    console.log(j);
+  }
+  j++;
+} while (j <= 100);
