@@ -28,14 +28,20 @@ if (idade >= 50) {
 // ">="(Maior ou igual a) => Verifica se o valor à esquerda é maior ou igual ao valor à direita
 // "<="(Menor ou igual a) => Compara se o valor à esquerda é menor ou igual ao valor à direita
 let idade2 = 13;
-if (idade2 >= 50) {
-  console.log("Senior");
-} else if (idade2 > 18 && idade2 < 50) {
-  console.log("Adulto");
-} else if (idade2 < 18 && idade2 >= 14) {
-  console.log("Adolescente");
-} else {
-  console.log("Criança");
+// "true" => Executa os blocos de código correspondentes a condição retornar "true"
+switch (true) {
+  case idade2 >= 50: // "case" => Caso a condição retorne "true", executa o bloco de código correspondente
+    console.log("Senior!");
+    break; // "break" => Usado para parar a execução do "switch" caso a condição retorne "true"
+  case idade2 > 18 && idade2 < 50: // "&&" => Comparando se "idade2" é maior que "18" e menor que "50"
+    console.log("Adulto!");
+    break;
+  case idade2 < 18 && idade2 >= 14:
+    console.log("Adolescente!");
+    break;
+  default: // "default" => Executado caso nenhuma da condições acima tenha retornado "true"
+    console.log("Criança!");
+    break;
 }
 
 let igualdadeNaoEstrita1 = "5"; // "=" => Operador de atribuição, altera ou atribui um valor a uma variável
@@ -108,6 +114,18 @@ if (!(nome === "João")) {
 let x = 1;
 let y = 2;
 
+// Operadores aritméticos
+// "+" => Adição
+// "-" => Subtração
+// "*" => Multiplicação
+// "/" => Divisão
+// "%" => Resto da divisão
+// "**" => Exponenciação
+// "++" => Incrementa o valor da variável em "1"
+// "--" => Decrementa o valor da variável em "1"
+// "+x" => Converte o valor da variável para "number"
+// "-x" => Converte o valor da variável para "number" e inverte o sinal
+
 // Adição
 console.log(x + y);
 
@@ -123,5 +141,17 @@ console.log(x / y);
 // Resto da divisão
 console.log(x % y);
 
-// Expoente
+// Exponenciação
 console.log(x ** y);
+
+// Incremento
+console.log(x++);
+
+// Decremento
+console.log(x--);
+
+// Conversão para "number"
+console.log(+x);
+
+// Conversão para "number" e inverte o sinal
+console.log(-x);

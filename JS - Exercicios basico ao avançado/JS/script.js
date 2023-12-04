@@ -526,3 +526,38 @@ do {
   }
   j++;
 } while (j <= 100);
+
+// Exercício 30 => Utilizando um laço for, imprima todos os números primos de 1 a 100
+let num = 2;
+
+for (num; num <= 100; num++) {
+  let isPrime = true;
+  let div = 2;
+
+  for (div; div < 100; div++) {
+    if (num % div == 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    console.log(`Os números primos entre um e cem são: ${num}`);
+  }
+}
+
+// Exercício 31 => Utilizando um laço while, crie um programa que advinha qual número o usuário pensou usando busca binaria
+let min = 1;
+let max = 100;
+let chute = Math.floor((max + min) / 2);
+let numeroPensado = 50;
+
+while (chute !== numeroPensado) {
+  if (chute > numeroPensado) {
+    max = chute;
+  } else {
+    min = chute;
+  }
+
+  chute = Math.floor((max + min) / 2)
+}
+console.log(`O numero pensado é: ${chute}`);
