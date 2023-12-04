@@ -558,6 +558,38 @@ while (chute !== numeroPensado) {
     min = chute;
   }
 
-  chute = Math.floor((max + min) / 2)
+  chute = Math.floor((max + min) / 2);
 }
 console.log(`O numero pensado é: ${chute}`);
+
+// Utilizando um laço do-while, crie um jogo de "Pedra, Papel e Tesoura" contra o computador
+let escolhaUsuário = "Pedra";
+let escolhaComputador;
+let resultado;
+
+do {
+  let aleatório = Math.floor(Math.random() * 3);
+  switch (aleatório) {
+    case 0:
+      escolhaComputador = "Pedra";
+      break;
+    case 1:
+      escolhaComputador = "Papel";
+      break;
+    default:
+      escolhaComputador = "Tesoura";
+      break;
+  }
+
+  if ((escolhaUsuário === "Pedra" && escolhaComputador === "Tesoura") || (escolhaUsuário === "Papel" && escolhaComputador === "Pedra") || (escolhaUsuário === "Tesoura" && escolhaComputador === "Papel")) {
+    resultado = "Usuário ganhou!";
+  } else if (escolhaUsuário === escolhaComputador) {
+    resultado = "Empate!";
+  } else {
+    resultado = "Computador ganhou!";
+  }
+
+  console.log(`Usuário ${escolhaUsuário} - Computador ${escolhaComputador} - Resultado ${resultado}`);
+} while (resultado === "Empate!");
+
+// Estudar o objeto "Math" e seus métodos
