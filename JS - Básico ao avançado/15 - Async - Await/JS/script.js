@@ -37,32 +37,6 @@ const showUserName = async (id) => {
 };
 showUserName(3);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // "Funções assíncronas" funcionam como "Promises", porém com uma sintaxe mais simples
 // "async" => Utilizado ao declarar a função
 // "await" => Utilizado quando é necessário aguardar por algo
