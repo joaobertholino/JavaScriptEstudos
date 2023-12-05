@@ -24,8 +24,6 @@ const lastNumber = 20;
 const addiction = fistNumber + lastNumber;
 console.log(`A soma dos valores da variáveis é: ${addiction}`);
 
-console.clear(); // Limpando console
-
 // Exercício 6 => Declare duas variáveis booleanas e use os operadores lógicos como "&&"(AND), "||"(OR), "!"(NOT) para realizar operações entre elas e imprima o retorno
 const myTruffy = true;
 const myFalsy = false;
@@ -111,8 +109,6 @@ const calcMediaTwo = (notaOne, notaTwo) => {
   }
 };
 calcMediaTwo(4.9, 5);
-
-console.clear(); // Limpando console
 
 // Exercício 11 => Escreva um programa que verifica se a pessoa tem idade para votar ou não
 const votoOne = (num) => {
@@ -261,8 +257,6 @@ const políndromoTwo = (word) => {
 };
 políndromoTwo("arara");
 
-console.clear(); // Limpando console
-
 // Exercício 16 => Escreva um programa onde receberá três números como argumentos e retornara o maior entre eles
 const highNumberOne = (x, y, z) => {
   if (x > y && x > z) {
@@ -385,8 +379,6 @@ const classificationNoteTwo = (x) => {
 };
 classificationNoteTwo(9);
 
-console.clear(); // Limpando console
-
 // Exercício 21 => Escreva um programa que retornara a estação climática com base no mês
 const stationOne = (x) => {
   if (x < 3 || x === 12) {
@@ -488,8 +480,6 @@ while (ex25 >= 1) {
   ex25--;
 }
 
-console.clear(); // Limpando console
-
 // Exercício 26 => Utilizando um laço do-while, imprima todos os números ímpares de 1 a 20
 let ex26 = 1;
 
@@ -562,7 +552,7 @@ while (chute !== numeroPensado) {
 }
 console.log(`O numero pensado é: ${chute}`);
 
-// Utilizando um laço do-while, crie um jogo de "Pedra, Papel e Tesoura" contra o computador
+// Exercício 32 => Utilizando um laço do-while, crie um jogo de "Pedra, Papel e Tesoura" contra o computador
 let escolhaUsuário = "Pedra";
 let escolhaComputador;
 let resultado;
@@ -592,4 +582,94 @@ do {
   console.log(`Usuário ${escolhaUsuário} - Computador ${escolhaComputador} - Resultado ${resultado}`);
 } while (resultado === "Empate!");
 
-// Estudar o objeto "Math" e seus métodos
+// Exercício 33 => Usando um laço for, imprima os primeiros 10 números da sequencia de Fibonacci
+let num1 = 0;
+let num2 = 1;
+
+console.log(num1);
+console.log(num2);
+
+for (let i = 0; i < 10; i++) {
+  let nextNum = num1 + num2;
+
+  console.log(nextNum);
+
+  num1 = num2;
+  num2 = nextNum;
+}
+
+// Exercício 34 => Usando um laço while, imprima os números de 1 a 100, mas para múltiplos de 3 imprima "Fizz" e para múltiplos de 5 imprima "Buzz". Para números que são múltiplos de ambos, imprima "FizzBuzz"
+let i = 1;
+
+while (i <= 100) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log(`FizzBuzz: ${i}`);
+  } else if (i % 3 === 0) {
+    console.log(`Fizz: ${i}`);
+  } else if (i % 5 === 0) {
+    console.log(`Buzz: ${i}`);
+  } else {
+    console.log(`Não é múltiplo nem de 3 e nem de 5: ${i}`);
+  }
+  i++;
+}
+
+// Exercício 35 => Usando um laço for, imprima os primeiros 10 números triangulares (n * (n + 1) / 2)
+for (let n = 0; n <= 10; n++) {
+  let triangular = (n * (n + 1)) / 2;
+  console.log(`O número ${triangular} é triangular!`);
+}
+
+// Exercício 36 => Utilizando um laço for, imprima todos os números perfeitos de 1 a 100
+for (let l = 1; l <= 100; l++) {
+  let soma = 0;
+
+  for (let k = 1; k < l; k++) {
+    if (l % k === 0) {
+      soma += k;
+    }
+  }
+  if (soma === l) {
+    console.log(l);
+  }
+}
+
+// Exercício 37 => Usando um laço while, imprima a soma dos quadrados dos primeiros 10 números naturais
+let squad = 0;
+let r = 1;
+
+while (r <= 10) {
+  squad += r * r;
+  r++;
+}
+console.log(`A soma dos quadrados dos 10 primeiros números naturais é: ${squad}`);
+
+// Exercício 38 => Utilizando um laço do-while, imprima a soma dos cubos dos 10 primeiros números naturais
+let cube = 0;
+let q = 1;
+
+do {
+  cube += q * q * q;
+  q++;
+} while (q <= 10);
+console.log(`A soma dos cubos dos 10 primeiros números naturais é: ${cube}`);
+
+// Exercício 39 => Utilizando um laço for, crie um programa onde irá calcular e imprimir o fatorial de um numero
+let ex39 = 5;
+let fat = 1;
+
+for (let i = 1; i <= ex39; i++) {
+  fat *= i;
+}
+console.log(`O fatorial de ${ex39} é: ${fat}`);
+
+// Exercício 40 => Utilizando um laço while, crie um programa que inverta um string
+let original = "Hello";
+let inverted = "";
+let a = original.length - 1;
+
+while (a >= 0) {
+  inverted += original[a];
+  a--;
+}
+console.log(`A string "${original}" invertida é: "${inverted}"`);
