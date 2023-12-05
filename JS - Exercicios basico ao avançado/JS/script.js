@@ -474,37 +474,37 @@ semáforoTwo("Yellow");
 semáforoTwo("Green");
 
 // Exercício 24 => Programe um loop onde será percorrido os números de 1 a 10 e imprimira cada um no console
-let x = 1;
+let ex24 = 1;
 
-for (x; x <= 10; x++) {
-  console.log(`${x}`);
+for (ex24; ex24 <= 10; ex24++) {
+  console.log(`Percorrendo de 1 a 10 usando 'for': ${ex24}`);
 }
 
 // Exercício 25 => Utilizando um laço while, imprima no console os números de 1 a 10 e ordem decrescente
-let y = 10;
+let ex25 = 10;
 
-while (y >= 1) {
-  console.log(`${y}`);
-  y--;
+while (ex25 >= 1) {
+  console.log(`Percorrendo em ordem decrescente de 1 a 10 usando 'while': ${ex25}`);
+  ex25--;
 }
 
 console.clear(); // Limpando console
 
 // Exercício 26 => Utilizando um laço do-while, imprima todos os números ímpares de 1 a 20
-let z = 1;
+let ex26 = 1;
 
 do {
-  if (z % 2 != 0) {
-    console.log(z);
+  if (ex26 % 2 != 0) {
+    console.log(`Números impares de 1 a 20: ${ex26}`);
   }
-  z++;
-} while (z <= 20);
+  ex26++;
+} while (ex26 <= 20);
 
 // Exercício 27 => Utilizando um laço for, imprima a tabuada do 5
-let fiveTable = 1;
+let ex27 = 1;
 
-for (fiveTable; fiveTable <= 10; fiveTable++) {
-  console.log(`5 x ${fiveTable} = ${5 * fiveTable}`);
+for (ex27; ex27 <= 10; ex27++) {
+  console.log(`5 x ${ex27} = ${5 * ex27}`);
 }
 
 // Exercício 28 => Utilizando um laço while, calcule e imprima a soma de todos os números de 1 a 100
