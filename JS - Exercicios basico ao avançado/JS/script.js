@@ -512,7 +512,7 @@ let j = 1;
 
 do {
   if (j % 2 == 0) {
-    console.log(j);
+    console.log(`Imprimindo todos os números pares de 1 a 100: ${j}`);
   }
   j++;
 } while (j <= 100);
@@ -523,34 +523,36 @@ let num = 2;
 for (num; num <= 100; num++) {
   let isPrime = true;
   let div = 2;
+  let sqrt = Math.sqrt(num);
 
-  for (div; div < 100; div++) {
-    if (num % div == 0) {
+  for (div, sqrt; div <= sqrt; div++) {
+    if (num % div === 0) {
       isPrime = false;
       break;
     }
   }
   if (isPrime) {
-    console.log(`Os números primos entre um e cem são: ${num}`);
+    console.log(`Imprimindo todos os números primos de 1 a 100: ${num}`);
   }
 }
 
-// Exercício 31 => Utilizando um laço while, crie um programa que advinha qual número o usuário pensou usando busca binaria
+// Exercício 31 => Utilizando um laço while, crie um programa que advinha qual número entre 1 e 800 o usuário pensou usando busca binaria(dividir para conquistar)
 let min = 1;
-let max = 100;
-let chute = Math.floor((max + min) / 2);
-let numeroPensado = 50;
+let max = 800;
+let search = Math.floor((max + min) / 2);
+let numberUser = 258;
 
-while (chute !== numeroPensado) {
-  if (chute > numeroPensado) {
-    max = chute;
+while (search !== numberUser) {
+  if (search > numberUser) {
+    max = search;
+    console.log(`"Search" > "numberSystem": ${min} - ${max}`);
   } else {
-    min = chute;
+    min = search;
+    console.log(`"Search" < "numberSystem": ${min} - ${max}`);
   }
-
-  chute = Math.floor((max + min) / 2);
+  search = Math.floor((max + min) / 2);
 }
-console.log(`O numero pensado é: ${chute}`);
+console.log(`O numero pensado foi: ${search}`);
 
 // Exercício 32 => Utilizando um laço do-while, crie um jogo de "Pedra, Papel e Tesoura" contra o computador
 let escolhaUsuário = "Pedra";
@@ -578,7 +580,6 @@ do {
   } else {
     resultado = "Computador ganhou!";
   }
-
   console.log(`Usuário ${escolhaUsuário} - Computador ${escolhaComputador} - Resultado ${resultado}`);
 } while (resultado === "Empate!");
 
