@@ -127,10 +127,10 @@ console.log(typeof typeStringTwo);
 const escapeSequencesOne = `Quebrando a linha \ncom Escape sequences`; // \n => Quebra de linha
 console.log(escapeSequencesOne);
 
-const escapeSequencesTwo = `Tabulação\tHorizontal`; // \t => Tabulação horizontal 
+const escapeSequencesTwo = `Tabulação\tHorizontal`; // \t => Tabulação horizontal
 console.log(escapeSequencesTwo);
 
-const escapeSequencesThree = `Quebra de linha\r\ne retorno de carro`; // \r => Quebra de linha e retorno de carro 
+const escapeSequencesThree = `Quebra de linha\r\ne retorno de carro`; // \r => Quebra de linha e retorno de carro
 console.log(escapeSequencesThree);
 
 const escapeSequencesFour = `Essa \'string\' possui aspas simples`; // \' => Aspas simples
