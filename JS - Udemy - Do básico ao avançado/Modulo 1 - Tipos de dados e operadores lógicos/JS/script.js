@@ -1,3 +1,5 @@
+console.warn("Tipos de dados e operadores lógicos");
+
 // Number => Tipo de números podem ser reais, inteiros etc
 const typeNumberOne = 10;
 console.log(typeof typeNumberOne); // typeof => Retorna o tipo de dado no console
@@ -8,50 +10,51 @@ console.log(typeof typeNumberTwo);
 const typeNumberThree = -10.5;
 console.log(typeof typeNumberThree);
 
-// Operações aritméticas e operadores => O retorno de valores sempre será do tipo number
+// Operações aritméticas e operadores => São operações matemáticas que podem ser realizadas com os números
 // A ordem de precedência dos operadores aritméticos em JavaScript é a seguinte:
 // 1° => Unários(prefixados e pós-fixados)
 // 2° => Módulos
 // 3° => Multiplicação, divisão e divisão por inteiro
 // 4° => Adição e subtração
-// + => Adição
+
+// + => Adição => Retorna a soma dos valores
 const addictionOne = 10;
 const addictionTwo = 15;
 const resultOne = addictionOne + addictionTwo; // Armazenando na variável "resultOne" a soma dos valores de "addictionOne" e "addictionTwo"
 console.log(resultOne);
 
-// - => Subtração
+// - => Subtração => Retorna a subtração dos valores
 const subtractionOne = 15;
 const subtractionTwo = 10;
 const resultTwo = subtractionOne - subtractionTwo;
 console.log(resultTwo);
 
-// * => Multiplicação
+// * => Multiplicação => Retorna a multiplicação dos valores
 const multiOne = 10;
 const multiTwo = 5;
 const resultThree = multiOne * multiTwo;
 console.log(resultThree);
 
-// / => Divisão
+// / => Divisão => Retorna a divisão dos valores
 const divideOne = 30;
 const divideTwo = 2;
 const resultFour = divideOne / divideTwo;
 console.log(resultFour);
 
-// % => Resto da divisão(Módulo)
+// % => Resto da divisão(Módulo) => Retorna o resto da divisão dos valores
 const restDivisionOne = 10;
 const restDivisionTwo = 3;
 const resultFive = restDivisionOne % restDivisionTwo;
 console.log(resultFive);
 
-// ** => Exponenciação
+// ** => Exponenciação => Retorna o valor de um número elevado a potência de outro
 const exponentOne = 10;
 const exponentTwo = 2;
 const resultSix = exponentOne ** exponentTwo;
 console.log(resultSix);
 
-// Operadores incremental e decremental => Incrementam em +1 ou decrementam em -1 o valor da variável
-// ++ => Incremento
+// Operadores incremental e decremental => Incrementam ou decrementam o valor de uma variável
+// ++ => Incremento => Incrementa o valor da variável em 1
 let increment = 10;
 let resultSeven = ++increment; // Incrementa o valor da variável antes de retornar o valor
 console.log(resultSeven);
@@ -59,7 +62,7 @@ console.log(resultSeven);
 const resultEight = increment++; // Incrementa o valor da variável depois de retornar o valor
 console.log(resultEight);
 
-// -- => Decremento
+// -- => Decremento => Decrementa o valor da variável em 1
 let decrement = 10;
 let resultNine = --decrement;
 console.log(resultNine);
@@ -67,26 +70,26 @@ console.log(resultNine);
 const resultTen = decrement--;
 console.log(resultTen);
 
-// Operadores aritméticos de atribuição => Executam a operação entre o valor da esquerda com o valor da direita e atribui esse resultado a variável da esquerda
-// += => Adição atribuída
+// Operadores aritméticos de atribuição => Realizam uma operação aritmética e atribuem o resultado a variável em questão
+// += => Adição atribuída => Soma o valor da variável com outro valor e atribui o resultado a variável da esquerda
 let assignedAdditionOne = 10;
 const assignedAdditionTwo = 10;
 assignedAdditionOne += assignedAdditionTwo;
 console.log(assignedAdditionOne);
 
-// -= => Subtração atribuída
+// -= => Subtração atribuída => Subtrai o valor da variável com outro valor e atribui o resultado a variável da esquerda
 let assignedSubtractionOne = 10;
 const assignedSubtractionTwo = 6;
 assignedSubtractionOne -= assignedSubtractionTwo;
 console.log(assignedSubtractionOne);
 
-// /= => Divisão atribuída
+// /= => Divisão atribuída => Divide o valor da variável com outro valor e atribui o resultado a variável da esquerda
 let assignedDivisionOne = 10;
 const assignedDivisionTwo = 3;
 assignedDivisionOne /= assignedDivisionTwo;
 console.log(assignedDivisionOne);
 
-// %= => Módulo atribuído
+// %= => Módulo atribuído => Retorna o resto da divisão dos valores e atribui o resultado a variável da esquerda
 let assignedModuleOne = 10;
 const assignedModuconstwo = 3;
 assignedModuleOne %= assignedModuconstwo;
@@ -115,14 +118,14 @@ console.log(typeStringTwo);
 console.log(typeof typeStringTwo);
 
 // Detalhes técnicos sobre o tipo string:
-// Escape sequences => As escape sequences são usadas para inserir caracteres especiais em uma string. Por exemplo, a sequência \n representa uma quebra de linha
+// Escape sequences => São caracteres especiais que podem ser utilizados dentro de uma string
 const escapeSequencesOne = `Quebrando a linha \ncom Escape sequences`; // \n => Quebra de linha
 console.log(escapeSequencesOne);
 
-const escapeSequencesTwo = `Tabulação\tHorizontal`; // \t => Tabulação horizontal
+const escapeSequencesTwo = `Tabulação\tHorizontal`; // \t => Tabulação horizontal 
 console.log(escapeSequencesTwo);
 
-const escapeSequencesThree = `Quebra de linha\r\ne retorno de carro`; // \r => Quebra de linha e retorno de carro
+const escapeSequencesThree = `Quebra de linha\r\ne retorno de carro`; // \r => Quebra de linha e retorno de carro 
 console.log(escapeSequencesThree);
 
 const escapeSequencesFour = `Essa \'string\' possui aspas simples`; // \' => Aspas simples
@@ -159,7 +162,11 @@ const concatTrue = concatOne + " de " + concatTwo;
 console.log(concatTrue);
 
 // Boolean => Retorna um "True" ou "False", utilizando operadores de comparação e lógicos
-// Operadores de comparação:
+// Operador de atribuição => Atribui o valor a uma variável
+const assignmentOne = true;
+console.log(assignmentOne);
+
+// Operadores de comparação => Comparam dois valores e retornam um boolean como resposta
 // == => (Igualdade) => Verifica se dois valores são iguais, convertendo os tipos se necessário
 const equalityOne = 10;
 const equalityTwo = "10";
@@ -208,7 +215,7 @@ const smallerEqualTwo = 10;
 const smallerEqualVerified = smallerEqualOne <= smallerEqualTwo;
 console.log(smallerEqualVerified);
 
-// Operadores Lógicos:
+// Operadores Lógicos => Combinam valores booleanos e retornam um boolean como resposta
 // && => (AND) => Retorna true se ambos os operandos forem true
 const andOperatorOne = 10;
 const andOperatorTwo = 20;
@@ -234,7 +241,7 @@ const ternaryOperator = 10;
 const ternaryOperatorVerified = ternaryOperator % 2 === 0 ? true : false;
 console.log(ternaryOperatorVerified);
 
-// Empty Values
+// Empty Values => Representam valores vazios ou desconhecidos
 // null => Representa a ausência intencional de qualquer objeto ou valor
 const emptyValueOne = null;
 console.log(emptyValueOne);
@@ -284,3 +291,5 @@ const conversionSixteen = true;
 const conversionSeventeen = "10";
 const conversionEighteen = conversionSixteen + conversionSeventeen;
 console.log(conversionEighteen);
+
+console.warn("Tipos de dados e operadores lógicos");
