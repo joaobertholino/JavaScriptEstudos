@@ -1,6 +1,6 @@
 console.warn("Tipos de dados e operadores lógicos");
 
-// Number => Tipo de números podem ser reais, inteiros etc
+// Number => Tipo de dado numérico, pode ser escrito com ou sem casas decimais e com ou sem sinal de negativo
 const typeNumberOne = 10;
 console.log(typeof typeNumberOne); // typeof => Retorna o tipo de dado no console
 
@@ -10,17 +10,22 @@ console.log(typeof typeNumberTwo);
 const typeNumberThree = -10.5;
 console.log(typeof typeNumberThree);
 
-// Operações aritméticas e operadores => São operações matemáticas que podem ser realizadas com os números
+// Operações aritméticas e operadores => Realizam operações matemáticas e retornam um valor numérico como resposta
 // A ordem de precedência dos operadores aritméticos em JavaScript é a seguinte:
 // 1° => Unários(prefixados e pós-fixados)
 // 2° => Módulos
 // 3° => Multiplicação, divisão e divisão por inteiro
 // 4° => Adição e subtração
+// 5° => Relacionais
+// 6° => Lógicos
+// 7° => Condicional
+// 8° => Atribuição
+// 9° => Vírgula
 
 // + => Adição => Retorna a soma dos valores
 const addictionOne = 10;
 const addictionTwo = 15;
-const resultOne = addictionOne + addictionTwo; // Armazenando na variável "resultOne" a soma dos valores de "addictionOne" e "addictionTwo"
+const resultOne = addictionOne + addictionTwo; // Armazenando o resultado da operação entre as variáveis em uma nova variável
 console.log(resultOne);
 
 // - => Subtração => Retorna a subtração dos valores
@@ -54,7 +59,7 @@ const resultSix = exponentOne ** exponentTwo;
 console.log(resultSix);
 
 // Operadores incremental e decremental => Incrementam ou decrementam o valor de uma variável
-// ++ => Incremento => Incrementa o valor da variável em 1
+// ++ => Incremento => Incrementa o valor da variável em +1
 let increment = 10;
 let resultSeven = ++increment; // Incrementa o valor da variável antes de retornar o valor
 console.log(resultSeven);
@@ -62,7 +67,7 @@ console.log(resultSeven);
 const resultEight = increment++; // Incrementa o valor da variável depois de retornar o valor
 console.log(resultEight);
 
-// -- => Decremento => Decrementa o valor da variável em 1
+// -- => Decremento => Decrementa o valor da variável em -1
 let decrement = 10;
 let resultNine = --decrement;
 console.log(resultNine);
@@ -91,8 +96,8 @@ console.log(assignedDivisionOne);
 
 // %= => Módulo atribuído => Retorna o resto da divisão dos valores e atribui o resultado a variável da esquerda
 let assignedModuleOne = 10;
-const assignedModuconstwo = 3;
-assignedModuleOne %= assignedModuconstwo;
+const assignedModuleTwo = 3;
+assignedModuleOne %= assignedModuleTwo;
 console.log(assignedModuleOne);
 
 // Special Numbers => São valores que não se comportam como números normais, sendo úteis para lidar com casos extremos e situações em que as operações matemáticas não podem ser realizadas
