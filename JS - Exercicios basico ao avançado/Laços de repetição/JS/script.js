@@ -208,7 +208,7 @@ while (operation >= 0) {
 }
 console.log(`A string "${original}" invertida é: "${inverted}"`);
 
-// Usando um laço do-while, crie um programa que transforme um numero decimal em binário
+// Exercício 41 => Usando um laço do-while, crie um programa que transforme um numero decimal em binário
 let number = 10;
 let bin = "";
 
@@ -217,3 +217,14 @@ do {
   number = Math.floor(number / 2);
 } while (number > 0);
 console.log(`O numero convertido em binário é: ${bin}`);
+
+// Exercício 42 => Usando um laço for, crie um programa que transforme um numero binário em decimal
+let binário = "1010";
+let decimal = 0;
+
+for (let i = binário.length - 1, j = 0; i >= 0; i--, j++) {
+  decimal += parseInt(binário[i]) * Math.pow(2, j);  
+}
+console.log(`O numero em decimal é ${decimal}`);
+
+// Exercício 43 => Usando um laço while, crie um programa que retorna se um numero é palíndromo ou não

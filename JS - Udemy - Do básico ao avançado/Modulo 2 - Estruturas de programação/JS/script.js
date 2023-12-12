@@ -375,17 +375,17 @@ while (x <= 50) {
 }
 
 // Exercício 10 => Crie uma função onde irá verificar se o numero é primo
-const isPrime = (num) => {
-  if (num <= 1) {
-    return false;
-  }
+const numberPrime = 6;
+let divisões = 0;
 
-  for (let i = 2; i <= Math.sqrt(num); i++) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
+for (let i = 0; i <= numberPrime; i++) {
+  if (numberPrime % i === 0) {
+    divisões++;
+  }  
+}
 
-  return true;
-};
-console.log(isPrime(2));
+if (divisões === 2) {
+  console.log(`O numero ${numberPrime} é primo!`);
+} else {
+  console.log(`O numero ${numberPrime} não é primo!`);
+}
