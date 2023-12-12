@@ -18,36 +18,16 @@ console.log(fibonacciSequence);
 let firstBinNumber = 1;
 let lastBinNumber = 400;
 let algCalc = Math.floor((firstBinNumber + lastBinNumber) / 2);
-const searchNumber = 256;
+const searchNumber = parseFloat(prompt("Digite um numero entre 1 e 400:"));
 
 while (searchNumber !== algCalc) {
   if (searchNumber < algCalc) {
     lastBinNumber = algCalc;
-    // console.log(`if => ${firstBinNumber} ${lastBinNumber}`);
+    console.log(`if => ${firstBinNumber} ${lastBinNumber}`);
   } else {
     firstBinNumber = algCalc;
-    // console.log(`else => ${firstBinNumber} ${lastBinNumber}`);
+    console.log(`else => ${firstBinNumber} ${lastBinNumber}`);
   }
   algCalc = Math.floor((firstBinNumber + lastBinNumber) / 2);
   console.log(`${algCalc}`);
 }
-
-// Função de calculo de nota media
-console.clear();
-
-let nota1 = parseFloat(window.prompt("Nota 1"));
-let nota2 = parseFloat(window.prompt("Nota 2"));
-let nota3 = parseFloat(window.prompt("Nota 3"));
-
-const media = (x, y, z) => {
-  let mediaNotas = (x + y + z) / 3;
-
-  if (mediaNotas < 6 && mediaNotas !== NaN) {
-    console.log(`Nota: ${Math.floor(mediaNotas)} - Reprovado!`);
-  } else if (mediaNotas >= 6 && mediaNotas !== NaN) {
-    console.log(`Nota ${Math.floor(mediaNotas)} - Aprovado`);
-  } else {
-    console.log(`Nota invalida!`);
-  }
-};
-media(nota1, nota2, nota3);
