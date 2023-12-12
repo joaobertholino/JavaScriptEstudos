@@ -223,8 +223,39 @@ let binário = "1010";
 let decimal = 0;
 
 for (let i = binário.length - 1, j = 0; i >= 0; i--, j++) {
-  decimal += parseInt(binário[i]) * Math.pow(2, j);  
+  decimal += parseInt(binário[i]) * Math.pow(2, j);
 }
 console.log(`O numero em decimal é ${decimal}`);
 
 // Exercício 43 => Usando um laço while, crie um programa que retorna se um numero é palíndromo ou não
+let paliNumber = 12321;
+let reverse = 0;
+let time = paliNumber;
+
+while (time > 0) {
+  let digito = time % 10;
+  reverse = (reverse * 10) + digito;
+  time = Math.floor(time / 10);
+}
+
+if (paliNumber == reverse) {
+  console.log(`${paliNumber} é um palíndromo!`);
+} else {
+  console.log(`${paliNumber} não é um palíndromo!`);
+}
+
+// Exercício 44 => Usando um laço do-while, crie um programa que imprima a soma de duas matrizes
+let matrizOne = [[1, 2], [3, 4]];
+let matrizTwo = [[5, 6], [7, 8]];
+let soma = [];
+let m = 0;
+do {
+  let j = 0;
+  soma[m] = [];
+  do {
+    soma[m][j] = matrizOne[m][j] + matrizTwo[m][j];
+    j++
+  } while (j < matrizOne[m].length);
+  m++
+} while (m < matrizOne.length);
+console.log(`A soma das matrizes é ${JSON.stringify(soma)}`);
