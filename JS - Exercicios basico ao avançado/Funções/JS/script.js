@@ -157,3 +157,45 @@ const stringRepeat = (x) => {
 console.log(stringRepeat(10));
 
 // Exercício 63 => Escreva uma função que recebe um número e retorne um array com todos os números primos até aquele número.
+const primeN = (num) => {
+  let prime = [];
+  for (let i = 2; i <= num; i++) {
+    if (isPrimeTwo(i)) {
+      prime.push(i);
+    }
+  }
+  return prime;
+};
+
+const isPrimeTwo = (num) => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+};
+
+console.log(primeN(10));
+
+// Exercício 64 => Escreva uma função que recebe uma string como argumentos e retorne o número de palavras na string
+const ex64 = `Olá meu nome é João Bertholino`;
+console.log(ex64.split(" "));
+
+const stringCount = (string) => {
+  return string.split(" ").length;
+};
+console.log(stringCount(ex64));
+
+// Exercício 65 => Escreva uma função que aceite um array de números e uma função de callback e retorne a soma de todos os números do array após a aplicação da função de callback
+const ex65 = [1, 2, 3, 4, 5];
+
+const callbackArray = (array, callback) => {
+  return array.map(callback).reduce((x, y) => x + y, 0);
+}
+
+const callbackFunction = (z) => {
+  return z * 2;
+}
+console.log(callbackArray(ex65, callbackFunction));
+
