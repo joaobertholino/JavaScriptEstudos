@@ -81,7 +81,7 @@ const isPrime = (x) => {
     }
   }
   return true;
-}
+};
 console.log(isPrime(7));
 
 // Exercício 54 => Escreva uma função que ordene um array de números em ordem decrescente
@@ -89,7 +89,7 @@ const ex54 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const invertedOrder = (array) => {
   return array.reverse();
-}
+};
 console.log(invertedOrder(ex54));
 
 // Exercício 55 => Escreva uma função que retorne o menor números em um array de números
@@ -97,7 +97,7 @@ const ex55 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const lowerItem = (array) => {
   return Math.min(...array); // Spread Operator - Espalha os itens do array como argumentos para a função Math.min
-}
+};
 console.log(lowerItem(ex55));
 
 // Exercício 56 => Escreva uma função que retorne o maior número de um array de números
@@ -105,13 +105,55 @@ const ex56 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const upperItem = (array) => {
   return Math.max(...array);
-}
+};
 console.log(upperItem(ex56));
 
 // Exercício 57 => Escreva uma função que retorne a soma de todos os números impares de um array de números
 const ex57 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const sumArray = (array) => {
-  return array.reduce((soma, num) => num % 2 !== 0 ? soma + num : soma, 0);
-}
+  return array.reduce((soma, num) => (num % 2 !== 0 ? soma + num : soma), 0);
+};
 console.log(sumArray(ex57));
+
+// Exercício 58 => Escreva uma função que retorne a soma de todos os números pares em um array de números
+const ex58 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const sumArrayTwo = (array) => {
+  return array.reduce((soma, num) => (num % 2 === 0 ? soma + num : soma), 0);
+};
+console.log(sumArrayTwo(ex58));
+
+// Exercício 59 => Escreva uma função que receba um array de números e retorne um novo array com todos os números duplicados
+const ex59 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const duplicateArray = (array) => {
+  return array.map((num) => num * 2);
+};
+console.log(duplicateArray(ex59));
+
+// Exercício 60 => Escreva uma função que recebe um array de números como argumento e retorne um novo array com cada numero ao seu quadrado
+const ex60 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const squareArray = (array) => {
+  return array.map((x) => x ** 2);
+};
+console.log(squareArray(ex60));
+
+// Exercício 61 => Escreva uma função que recebe um array de números como argumento e retorne um novo array com a raiz quadrada de todos os números
+const ex61 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const sqrtArray = (array) => {
+  return array.map((x) => Math.sqrt(x, 2));
+};
+console.log(sqrtArray(ex61));
+
+// Exercício 62 => Escreva uma função que recebe um número e retorne um uma string repetida aquele número de vezes
+const ex62 = "Oi!";
+
+const stringRepeat = (x) => {
+  return ex62.repeat(x);
+};
+console.log(stringRepeat(10));
+
+// Exercício 63 => Escreva uma função que recebe um número e retorne um array com todos os números primos até aquele número.
