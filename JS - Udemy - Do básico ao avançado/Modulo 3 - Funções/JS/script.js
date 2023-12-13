@@ -210,6 +210,55 @@ function negativeToPositiveDefault(x) {
 }
 console.log(negativeToPositiveDefault(-37));
 
-// Exercício 8 => ...
+// Exercício 8 => Escreva uma função que recebe uma string, onde caso a string tiver mais que 10 caracteres imprima "Texto muito longo", se tiver menos, imprima "Texto dentro do limite"
+const stringEx8One = `Olá, meu nome é João Bertholino, e o seu?`;
+const stringVerifiedOne = (string) => {
+  if (string.length >= 10) {
+    console.log(`String muito longa!`);
+  } else {
+    console.log(`String dentro do limite!`);
+  }
+};
+stringVerifiedOne(stringEx8One);
+
+const stringEx8Two = `Olá!`;
+function stringVerifiedTwo(string) {
+  if (string.length >= 10) {
+    console.log(`String muito longa!`);
+  } else {
+    console.log(`String dentro do limite!`);
+  }
+}
+stringVerifiedTwo(stringEx8Two);
+
+// Exercício 9 => Escreva uma função que recebe dois números, o primeiro é a base e o segundo a potência, depois retorne o resultado
+const potentialTwo = (x, y) => {
+  return Math.pow(x, y);
+};
+console.log(potentialTwo(4, 2));
+
+function potentialThree(x, y) {
+  return x ** y;
+}
+console.log(potentialThree(3, 4));
+
+// Exercício 10 => Escreva uma função que recebe um numero, e o decrementa de 1 em 1 com um loop e imprima apenas os números pares no console
+const decrementOne = (x) => {
+  for (x; x >= 0; x--) {
+    if (x % 2 === 0 && x !== 0) {
+      console.log(`Imprimindo número par: ${x}`);
+    }
+  }
+};
+decrementOne(10);
+
+function decrementTwo(x) {
+  for (let i = x; i >= 0; i--) {
+    if (i % 2 === 0 && i !== 0) {
+      console.log(`Imprimindo número par: ${i}`);
+    }
+  }
+}
+decrementTwo(20);
 
 console.warn(`Modulo 3 - Exercícios sobre funções`);

@@ -83,3 +83,35 @@ const isPrime = (x) => {
   return true;
 }
 console.log(isPrime(7));
+
+// Exercício 54 => Escreva uma função que ordene um array de números em ordem decrescente
+const ex54 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const invertedOrder = (array) => {
+  return array.reverse();
+}
+console.log(invertedOrder(ex54));
+
+// Exercício 55 => Escreva uma função que retorne o menor números em um array de números
+const ex55 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const lowerItem = (array) => {
+  return Math.min(...array); // Spread Operator - Espalha os itens do array como argumentos para a função Math.min
+}
+console.log(lowerItem(ex55));
+
+// Exercício 56 => Escreva uma função que retorne o maior número de um array de números
+const ex56 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const upperItem = (array) => {
+  return Math.max(...array);
+}
+console.log(upperItem(ex56));
+
+// Exercício 57 => Escreva uma função que retorne a soma de todos os números impares de um array de números
+const ex57 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const sumArray = (array) => {
+  return array.reduce((soma, num) => num % 2 !== 0 ? soma + num : soma, 0);
+}
+console.log(sumArray(ex57));
