@@ -155,6 +155,22 @@ console.log(person.name); // Acessando uma propriedade específica do objeto
 console.log(person.greeting()); // Acessando um método específico do objeto
 console.log(person["farewell"]()); // Também é possível acessar um método específico do objeto usando a sintaxe de colchetes
 
-// Adicionando e deletando propriedades de um objeto - Aula 136
+// Deletando e criando propriedades de um objeto apos a sua criação
+const person2 = {
+  name: "Ellen",
+  age: 17,
+  isStudent: true,
+};
+
+// Deletando uma propriedade
+console.log(person2.age); // Acessando a propriedade age do objeto person2
+delete person2.age; // Deletando a propriedade age do objeto person2 usando a palavra-chave delete
+console.log(person2.age); // Após deletar a propriedade age do objeto person2, o valor dela passa a ser undefined
+
+// Adicionando uma propriedade
+person2.isWorking = true; // Adicionando a propriedade isWorking ao objeto person2
+console.log(person2);
+
+// Copiando propriedades de um objeto => Aula 137 Ûdemy
 
 console.warn(`Modulo 4 - Arrays e Objetos`);
