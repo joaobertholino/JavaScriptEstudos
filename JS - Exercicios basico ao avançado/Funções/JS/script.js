@@ -200,3 +200,10 @@ const callbackFunction = (z) => {
 console.log(callbackArray(ex65, callbackFunction));
 
 // Exercício 66 => Escreva uma função que aceite uma função de callback que retorne verdadeiro ou falso e um array, e retorne um novo array que contém apenas os elementos para os quais a função de callback retornou verdadeiro
+const ex66 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+const callback = arr => arr.reduce((x, y) => x + y, 0);
+
+const arrayMap = (array, callback) => {
+  return array.map(callback);
+}
+console.log(arrayMap(ex66, callback));
