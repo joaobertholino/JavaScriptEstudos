@@ -26,151 +26,156 @@ console.log(arrayTwo.length); // length => Retorna o tamanho do array (quantidad
 console.log(arrayTwo["length"]); // Também é possível acessar a propriedade length usando a sintaxe de colchetes
 
 // Métodos são ações que funcionam como funções, mas que são executadas por meio de um objeto, usam a sintaxe nomeDoArray.nomeDoMétodo()
-// Métodos de Modificação (Alteram o Array Original):
-// push: Adiciona elementos ao final do array.
-const arrayPush = [1, 2];
-arrayPush.push(3);
+// Métodos de array
+// pop(); => Remove o ultimo elemento do array e retorna esse elemento
+const arrayMethods = ["JavaScript", "TypeScript", "NodeJs", "ReactJs", "Angular"];
 
-// pop: Remove o último elemento do array.
-const arrayPop = [1, 2, 3];
-const removedElement = arrayPop.pop();
+const removedLastElement = arrayMethods.pop();
+console.log(arrayMethods);
 
-// shift: Remove o primeiro elemento do array.
-const arrayShift = [1, 2, 3];
-const shiftedElement = arrayShift.shift();
+// push(); => Adiciona um novo elemento ao final do array
+const addElement = arrayMethods.push(removedLastElement); // Adicionando o elemento do qual foi removido e armazenado em uma variável
+console.log(arrayMethods);
 
-// unshift: Adiciona elementos ao início do array.
-const arrayUnshift = [2, 3];
-arrayUnshift.unshift(1);
+// shift(); => Remove o primeiro elemento do array e retorna esse elemento
+const removedFirstElement = arrayMethods.shift();
+console.log(arrayMethods);
 
-// splice: Modifica o conteúdo do array removendo ou substituindo elementos.
-const arraySplice = [1, 2, 3, 4, 5];
-arraySplice.splice(2, 1);
+// unshift(); => Adiciona um ou mais elementos no inicio do array e retorna o novo comprimento do array
+const newlength = arrayMethods.unshift(removedFirstElement);
+console.log(`Novo comprimento(length) do array: ${newlength}`);
+console.log(arrayMethods);
 
-// reverse: Inverte a ordem dos elementos no array.
-const arrayReverse = [1, 2, 3];
-arrayReverse.reverse();
+// indexOf(); => Encontra o índice de um determinado elemento
+const indiceElement = arrayMethods.indexOf("TypeScript");
+console.log(indiceElement);
 
-// sort: Ordena os elementos do array.
-const arraySort = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
-arraySort.sort();
+// lastIndexOf(); => Encontra o ultimo índice de um elemento
+const lastIndiceElement = arrayMethods.lastIndexOf("Angular");
+console.log(lastIndiceElement);
 
-// Métodos de Acesso (Não Modificam o Array Original):
-// concat: Combina dois ou mais arrays, criando um novo array.
-const arrayConcat1 = [1, 2];
-const arrayConcat2 = [3, 4];
-const newArrayConcat = arrayConcat1.concat(arrayConcat2);
-console.log(newArrayConcat);
+// slice(); => Retorna um array a partir de outro array, o array retornado é determinado pelos parâmetros que são os índices de início e fim do novo array
+const sliceMethodsOne = arrayMethods.slice(1, 4); // Retornando um novo array com os elementos do índice 1 ao 3, índice 4 é exclusivo
+console.log(sliceMethodsOne);
 
-// slice: Retorna uma parte do array.
-const arraySlice = [1, 2, 3, 4, 5];
-const slicedArray = arraySlice.slice(1, 4);
-console.log(slicedArray);
+const sliceMethodsTwo = arrayMethods.slice(-2); // Retornando um novo array com os 2 últimos elementos do array
+console.log(sliceMethodsTwo);
 
-// indexOf: Retorna o índice da primeira ocorrência de um elemento.
-const arrayIndexOf = [1, 2, 3, 4, 5];
-const index = arrayIndexOf.indexOf(3);
-console.log(index);
+const sliceMethodsThree = arrayMethods.slice(1, -2); // Retornando um novo array com os elementos a partir do índice 1 com exceção dos dois últimos
+console.log(sliceMethodsThree);
 
-// lastIndexOf: Retorna o índice da última ocorrência de um elemento.
-const arrayLastIndexOf = [1, 2, 3, 4, 3, 5];
-const lastIndex = arrayLastIndexOf.lastIndexOf(3);
-console.log(lastIndex);
+// forEach((params) => {}); => Itera cada elemento do array executando uma função para cada um
+arrayMethods.forEach((language) => {
+  console.log(`Linguagem: ${language}`);
+});
 
-// Métodos de Iteração (Não Modificam o Array Original):
-// forEach: Executa uma função para cada elemento do array.
-const arrayForEach = [1, 2, 3];
-arrayForEach.forEach((element) => console.log(element));
-console.log(arrayForEach);
+// includes(); => Verifica se um array tem um determinado elemento
+const arrayIncludes = arrayMethods.includes("Java"); // Retorna um boolean
+console.log(arrayIncludes);
 
-// map: Cria um novo array com os resultados de uma função aplicada a cada elemento.
-const arrayMap = [1, 2, 3];
-const newArrayMap = arrayMap.map((element) => element * 2);
-console.log(newArrayMap);
+// reverse(); => Retorna um novo array sendo ele em ordem invertida em relação ao original
+const arrayReverse = arrayMethods.reverse();
+console.log(arrayReverse);
 
-// filter: Cria um novo array com os elementos que passam em um teste especificado.
-const arrayFilter = [1, 2, 3, 4, 5];
-const filteredArray = arrayFilter.filter((element) => element > 2);
-console.log(filteredArray);
+// Métodos de String
+// trim(); => Remove espaços em branco do inicio e do final de uma string
+const trimMethodOne = `      João     `;
+const methodTrim = trimMethodOne.trim();
+console.log(methodTrim);
 
-// every: Verifica se todos os elementos satisfazem uma condição.
-const arrayEvery = [1, 2, 3, 4, 5];
-const allGreaterThanZero = arrayEvery.every((element) => element > 0);
-console.log(allGreaterThanZero);
+// padStart(); => Inserir caracteres antes da string
+const valueMoney = "300";
+const padStartReal = valueMoney.padStart(5, "R$"); // padStart(comprimentoDesejado, valorInserido)
+console.log(padStartReal);
 
-// some: Verifica se pelo menos um elemento satisfaz uma condição.
-const arraySome = [1, 2, 3, 4, 5];
-const hasEvenNumber = arraySome.some((element) => element % 2 === 0);
-console.log(hasEvenNumber);
+// split(""); => Divide uma string por um separador e retorna um novo array
+const phase = `Testando método de split do JS`;
 
-// reduce: Aplica uma função acumuladora a cada elemento para reduzir o array a um único valor.
-const arrayReduce = [1, 2, 3, 4, 5];
-const sum = arrayReduce.reduce((accumulator, element) => accumulator + element, 0);
-console.log(sum);
+const splitPhaseLether = phase.split(""); // Retorna cada caractere da string como um elemento do array 
+console.log(splitPhaseLether);
 
-// reduceRight: Semelhante ao reduce, mas começa a partir do último elemento.
-const arrayReduceRight = [1, 2, 3, 4, 5];
-const reversedSum = arrayReduceRight.reduceRight((accumulator, element) => accumulator + element, 0);
-console.log(reversedSum);
+const splitPhaseWords = phase.split(" "); // Retorna cada palavra separada por espaços da string
+console.log(splitPhaseWords);
 
-// Métodos de Busca (Não Modificam o Array Original):
-// find: Retorna o primeiro elemento que satisfaz uma condição.
-const arrayFind = [1, 2, 3, 4, 5];
-const foundElement = arrayFind.find((element) => element > 2);
-console.log(foundElement);
-
-// findIndex: Retorna o índice do primeiro elemento que satisfaz uma condição.
-const arrayFindIndex = [1, 2, 3, 4, 5];
-const foundIndex = arrayFindIndex.findIndex((element) => element > 2);
-console.log(foundIndex);
-
-// Métodos de Manipulação (Modificam o Array Original):
-// fill: Preenche todos os elementos do array com um valor específico.
-const arrayFill = [1, 2, 3, 4, 5];
-arrayFill.fill(0);
-console.log(arrayFill);
-
-// copyWithin: Copia uma sequência de elementos dentro do array.
-const arrayCopyWithin = [1, 2, 3, 4, 5];
-arrayCopyWithin.copyWithin(0, 3);
-console.log(arrayCopyWithin);
+//! Métodos de string: join => Aula 151;
 
 // Objetos => São estruturas que permitem armazenar diversos valores em uma mesma variável, permitindo acessá-los por meio de um nome
 // Devem ser declarados entre chaves {} e os itens separados por vírgula
-const person = {
-  name: "João",
-  age: 20,
-  isStudent: true,
-  // Também é possível declarar funções dentro de objetos
-  greeting: function () {
-    return "Olá!";
-  },
-  // Também é possível declarar funções de forma resumida
-  farewell() {
-    return "Tchau!";
+const Dog = {
+  paws: 4,
+  name: "Shark",
+
+  // Criando métodos para o objeto
+  bark: () => {
+    return `Au Au`;
   },
 };
-console.log(person); // Acessando o objeto inteiro
-console.log(person.name); // Acessando uma propriedade específica do objeto
-console.log(person.greeting()); // Acessando um método específico do objeto
-console.log(person["farewell"]()); // Também é possível acessar um método específico do objeto usando a sintaxe de colchetes
+// Acessando o objeto por completo
+console.log(Dog);
 
-// Deletando e criando propriedades de um objeto apos a sua criação
-const person2 = {
-  name: "Ellen",
-  age: 17,
-  isStudent: true,
+// Acessando propriedades do objeto
+console.log(Dog.name);
+
+// Acessando o método do objeto
+console.log(Dog.bark());
+
+// Deletando a adicionando propriedades ao objeto
+const PersonOne = {
+  name: `João`,
+  age: `21`,
+  profession: `Programador`,
+
+  sayHi: () => {
+    return `Olá, meu nome é ${PersonOne.name}, tenho ${PersonOne.age} anos`;
+  },
+};
+console.log(PersonOne);
+
+// Deletando propriedades => Não muito usado tendo em vista que pode-se apenas ignorar uma propriedade
+delete PersonOne.profession;
+console.log(PersonOne);
+
+// Adicionando propriedades
+PersonOne.birthday = `03/07/2002`;
+console.log(PersonOne);
+
+// Herança de propriedades entre um objeto e outro
+const Car = {
+  doors: 4,
+  color: "red",
+  brand: "Ford",
 };
 
-// Deletando uma propriedade
-console.log(person2.age); // Acessando a propriedade age do objeto person2
-delete person2.age; // Deletando a propriedade age do objeto person2 usando a palavra-chave delete
-console.log(person2.age); // Após deletar a propriedade age do objeto person2, o valor dela passa a ser undefined
+const Additional = {
+  sunroof: true,
+  airConditioning: true,
+};
+console.log(Car);
 
-// Adicionando uma propriedade
-person2.isWorking = true; // Adicionando a propriedade isWorking ao objeto person2
-console.log(person2);
+// Utilizando o objeto "Object" junto ao método "assing" onde o objeto "Car" herda as propriedades do objeto "Additional"
+Object.assign(Car, Additional);
+console.log(Car);
 
-// Copiando propriedades de um objeto => Aula 137 Ûdemy
+// Verificando quais chaves cada objeto possui utilizando a sintaxe => Object.keys(nomeDoObjeto)
+console.log(Object.keys(Car)); // Retorna um array indexado com cada chave do objeto
 
-console.warn(`Modulo 4 - Arrays e Objetos`);
+//! Mutability => Um objeto pode herdar todas as características do outro, virando uma referencia ao mesmo
+const CatOne = {
+  name: "Boris",
+};
+
+const CatTwo = CatOne;
+console.log(CatOne === CatTwo); // Retorna um boolean
+
+CatTwo.name = `Romeo`;
+console.log(CatOne.name); // Ao alterar as propriedades de um objeto referencia a outro objeto, automaticamente interfere no outro
+
+CatOne.name = "Sindy";
+console.log(CatTwo.name); // Mesma coisa ao contrario
+
+// Loops em Arrays
+const namesLoop = ["João", "Ellen", "Nicolas", "Adriano", "Lucas", "Marcos"];
+
+for (let i = 0; i < namesLoop.length; i++) {
+  console.log(namesLoop[i]); // Imprimindo cada elemento do array por meio do loop
+}
