@@ -97,7 +97,26 @@ console.log(splitPhraseLether);
 const splitPhaseWords = phrase.split(" "); // Retorna cada palavra separada por espaços da string
 console.log(splitPhaseWords);
 
-//! Métodos de string: join => Aula 151;
+// join(""); => Insere um separado para transformar um array em uma string, sendo ao contrario do método split
+const joinMethodOne = arrayMethods.join(" "); // Inserindo um espaço entre cada elemento do array para formar uma string
+console.log(joinMethodOne);
+
+const joinMethodTwo = arrayMethods.join("-"); // Inserindo um traço
+console.log(joinMethodTwo);
+
+// repeat(); => Repete uma string n vezes, sendo n o numero passado como parâmetro
+const repeatMethod = `Testando método repeat.`;
+const repeatMethodApply = repeatMethod.repeat(5); // Para separar cada uma das repetições a string precisar ter um espaço no final
+console.log(repeatMethodApply);
+
+// Rest operator => Forma de uma função receber indefinidos parâmetros
+const restOperator = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const restOperatorApply = (...args) => {
+  for (let i = 0; i < args.length; i++) {
+    console.log(`Imprimindo elementos do array pelo método Rest: ${args[i]}`);
+  }
+};
+restOperatorApply(restOperator);
 
 // Objetos => São estruturas que permitem armazenar diversos valores em uma mesma variável, permitindo acessá-los por meio de um nome
 // Devem ser declarados entre chaves {} e os itens separados por vírgula
@@ -163,7 +182,10 @@ console.log(Car);
 // Verificando quais chaves cada objeto possui utilizando a sintaxe => Object.keys(nomeDoObjeto)
 console.log(Object.keys(Car)); // Retorna um array indexado com cada chave do objeto, inclusive as chaves herdadas de outro objeto
 
-//! Mutabilidade => Um objeto pode herdar todas as características do outro, virando uma referencia ao mesmo
+// Verificando quais valores atribuídos as propriedades cada objeto possuí => Object.values(nomeDoObjeto)
+console.log(Object.values(Car)); // Retorna um array assim como o método keys
+
+// Mutabilidade => Um objeto pode herdar todas as características do outro, virando uma referencia ao mesmo
 const CatOne = {
   name: "Boris",
 };
@@ -178,9 +200,186 @@ console.log(CatOne.name); // Ao modificar um objeto, a modificação refletira e
 CatOne.name = "Sindy";
 console.log(CatTwo.name); // Esse conceito se aplica a todos os objetos que possuem referentes
 
+// Criando um objeto idêntico porem não referente
+const CatThree = {
+  name: "Boris",
+};
+console.log(CatOne === CatThree); // Mesmo o objeto CatThree sendo idêntico ao objeto CatOne, eles não se referenciam
+
 // Utilizando loop para iterar sobre cada elemento do array
 const namesLoop = ["João", "Ellen", "Nicolas", "Adriano", "Lucas", "Marcos"];
 
 for (let i = 0; i < namesLoop.length; i++) {
   console.log(`Names of array with loop: ${namesLoop[i]}`); // Imprimindo cada elemento do array por meio do loop
 }
+
+const numbersLoop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+for (let i = 0; i <= numbersLoop.length; i++) {
+  if (i % 2 === 0 && i !== 0) {
+    console.log(`Número par: ${i}`);
+  } else if (i % 2 !== 0) {
+    console.log(`Número ímpar: ${i}`);
+  } else {
+    console.log(`Igual a zero: ${i}`);
+  }
+}
+
+// Destructuring em objetos => Definir variáveis com os valores das propriedades de um objeto com uma sintaxe oneLine
+const PersonTwo = {
+  name: `Ellen`,
+  age: 17,
+};
+
+const { name: vName, age: vAge } = PersonTwo; // Atribuindo o valor das propriedades do objeto a variáveis
+console.log(vName, vAge); // As variáveis são criadas como constantes, não podendo ser reatribuídas
+
+// Destructuring em array => Mesmo conceito do destructuring em objetos porem em arrays
+const destructuringArray = ["João", "Ellen", "Nicolas"];
+
+const [nameOne, nameTwo, nameThree] = destructuringArray;
+console.log(nameOne, nameTwo, nameThree);
+
+// JSON => JavaScript Object Notation => Utilizado para comunicação entre back-end e front-end de uma aplicação sendo muito semelhante a um objeto JavaScript
+// Aceita apenas aspas duplas e não permite comentário
+const JsonObject = {
+  name: "João",
+  age: 21,
+  position: "Developer student",
+  languages: ["HTML", "CSS", "JavaScript"],
+};
+// Acessando uma propriedade do JSON
+console.log(JsonObject.chaveOne);
+console.log(JsonObject.chaveThree);
+
+// Converter JSON <=> String
+const convertOne = JSON.stringify(JsonObject); // JSON.stringify => Converte de JSON para string, não permitindo mais acessar propriedades por não ser mais um objeto
+console.log(convertOne);
+console.log(typeof convertOne);
+
+const convertTwo = JSON.parse(convertOne); // JSON.parse => Convertendo de string para JSON, permitindo novamente o acesso de propriedades especificas
+console.log(convertTwo);
+console.log(typeof convertTwo);
+
+console.warn(`Modulo 4 - Arrays e Objetos`);
+console.warn(`Modulo 4 - Arrays e Objetos - Exercícios`);
+
+// Exercício 1 => Crie um array com 5 itens e acesse os itens 1, 3, 4;
+const ex1 = ["João", "Adriano", "Ellen", "Nicolas", "Lucas"];
+console.log(ex1[0], ex1[2], ex1[3]);
+
+// Exercício 2 => Crie um array com 2 elementos e outro array com 4 elementos e imprima a quantidade de elementos em cada array no console
+const ex2ArrayOne = ["Ellen", "Sthefani"];
+console.log(ex2ArrayOne["length"]);
+
+const ex2ArrayTwo = ["João", "Victor", "Bertholino", "Cestari"];
+console.log(ex2ArrayTwo.length);
+
+// Exercício 3 => Crie um objeto ônibus com 8 rodas, limite de passageiros de 40 e 2 portas, e imprima todas as propriedades no console
+const Ônibus = {
+  rodas: 8,
+  passageiros: 40,
+  portas: 2,
+};
+console.log(`Valor da primeira propriedade: ${Ônibus.rodas}`);
+console.log(`Valor da segunda propriedade: ${Ônibus.passageiros}`);
+console.log(`Valor da terceira propriedade: ${Ônibus.portas}`);
+
+// Exercício 4 => Adicione a propriedade janelas no ônibus, com o valor de 20 e imprima a propriedade janelas no console, após isso delete a propriedade rodas
+Ônibus.janelas = 20;
+console.log(Ônibus.janelas);
+
+delete Ônibus.rodas;
+
+// Exercício 5 => Crie um array com 5 nomes, incluindo o seu, verifique se o seu nome exite no array e se existir, imprima um mensagem no console
+const ex5 = ["João", "Ellen", "Nicolas", "Adriano", "Lucas"];
+
+ex5.forEach((names) => {
+  if (names === "João") {
+    console.log(`Este é meu nome: ${names}`);
+  } else {
+    console.log(`Este NÂO é meu nome: ${names}`);
+  }
+});
+
+if (ex5.includes("João")) {
+  console.log(`Meu nome foi encontrado`);
+} else {
+  console.log(`Meu nome não foi encontrado`);
+}
+
+// Exercício 6 => Crie dois arrays, um com mais de 5 elementos e outro com menos, faça uma função que verifica o número de elementos, se caso possuir menos que 5, imprima no console "Poucos elementos" e se possuir igual ou mais que 5 elementos, imprima "Muitos elementos" no console
+const ex6ArrayOne = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const ex6ArrayTwo = [1, 2, 3, 4];
+
+const arrayLengthOne = (array) => {
+  if (array.length >= 5) {
+    console.log(`Muitos elementos: ${array.length}`);
+  } else {
+    console.log(`Poucos elementos: ${array.length}`);
+  }
+};
+arrayLengthOne(ex6ArrayOne);
+arrayLengthOne(ex6ArrayTwo);
+
+// Exercício 7 => Crie um array com 5 elementos e faça uma iteração entre todos eles e imprima no console o valor
+const ex7 = ["SENAI", "SESI", "SENAC", "CIESP", "FIESP"];
+
+ex7.forEach((elements) => {
+  console.log(`forEach: ${elements}`);
+});
+
+for (let i = 0; i <= ex7.length; i++) {
+  console.log(`loop for: ${ex7[i]}`);
+}
+
+// Exercício 8 => Crie um JSON com 3 propriedades, atribua ele a uma variável e acesse as propriedades imprimindo no console
+const ex8 = {
+  name: "João",
+  age: 21,
+  position: "Developer student",
+};
+const jsonEx8 = ex8;
+
+console.log(jsonEx8.name);
+console.log(jsonEx8.age);
+console.log(jsonEx8.position);
+
+// Exercício 9 => Crie um array a partir de uma string e imprima cada palavra do array no console por meio de um loop for
+const ex9 = `O rato roeu a roupa do Rei de Roma.`;
+const stringToArray = ex9.split(" ");
+
+for (let i = 0; i < stringToArray.length; i++) {
+  console.log(stringToArray[i]);
+}
+
+stringToArray.forEach((elements) => {
+  console.log(elements);
+});
+
+// Exercício 10 => Desafio calculadora => Crie um objeto calculadora que tem os seguintes métodos: somar, subtrair, multiplicar e dividir, onde cada método deve aceitar apenas dois parâmetros, utilize cada um dos métodos e imprima os valores no console
+const calculate = {
+  sum: (x, y) => {
+    return x + y;
+  },
+
+  subtract: (x, y) => {
+    return x - y;
+  },
+
+  multiplication: (x, y) => {
+    return x * y;
+  },
+
+  divide: (x, y) => {
+    return x / y;
+  },
+};
+console.log(calculate.sum(2, 2));
+console.log(calculate.subtract(4, 2));
+console.log(calculate.multiplication(2, 2));
+console.log(calculate.divide(2, 2));
+
+console.warn(`Modulo 4 - Arrays e Objetos - Exercícios`);
+
+//! Praticar mais sobre os métodos de array filter e indexOf para remover e adicionar elementos em um array
