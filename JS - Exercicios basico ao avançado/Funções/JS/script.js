@@ -207,3 +207,13 @@ const arrayMap = (array, callback) => {
   return array.map(callback);
 }
 console.log(arrayMap(ex66, callback));
+
+// Exercício 67 => Escreva uma função que aceite uma função de callback e um array de arrays, e retorne um novo array que contém os resultados de aplicar a função callback a cada array
+function arrayMapper(array, callback) {
+  return array.map(callback);
+}
+
+const arrays = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+const callbackFunc = (arr) => arr.reduce((x, y) => x + y, 0);
+
+console.log(arrayMapper(arrays, callbackFunc));

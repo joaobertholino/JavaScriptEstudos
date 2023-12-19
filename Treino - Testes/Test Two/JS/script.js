@@ -11,7 +11,7 @@ const calc = (x, y) => {
 btnCalc.addEventListener("click", () => {
   if (regexString.test(inputPeso.value) || regexString.test(inputAltura.value)) {
     result.textContent = "Valor invalido!";
-    result.style.color = "red"
+    result.style.color = "red";
     setTimeout(() => {
       window.location.reload();
     }, 2000); // 2000ms => 2s

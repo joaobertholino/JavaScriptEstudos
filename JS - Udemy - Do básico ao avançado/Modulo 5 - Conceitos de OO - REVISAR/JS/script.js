@@ -247,11 +247,19 @@ class Cat extends Mammal {
   }
 
   meow() {
-    return `MEOW MEOW MEOW!`
+    return `MEOW MEOW MEOW!`;
   }
 }
 const catOne = new Cat(4, "Black");
 console.log(catOne);
 console.log(catOne.meow());
 
-//! Operador instaceOf => Aula 198
+// instanceOf operator => Permite verificar quem é o pai do objeto
+console.log(catOne instanceof Mammal); // Verificando se catOne é instancia de Mammal
+
+console.warn("Modulo 5 - Conceitos de OO");
+console.warn("Modulo 5 - Conceitos de OO - Exercícios");
+
+//! Iniciar seção de exercícios sobre OO
+
+console.warn("Modulo 5 - Conceitos de OO - Exercícios");
