@@ -46,7 +46,7 @@ const stringInverted = (x) => {
   let stringInverted = x.split("").reverse().join("");
   return stringInverted;
 };
-console.log(stringInverted("abc"));
+console.log(stringInverted("hello"));
 
 // Exercício 51 => Escreva uma função que aceita um numero como argumento e retorna o fatorial desse numero
 const fatorialNum = (x) => {
@@ -60,45 +60,50 @@ const fatorialNum = (x) => {
 console.log(fatorialNum(5));
 
 // Exercício 52 => Escreva uma função que calcule o enésimo numero da sequencia de Fibonacci
-const enesimoFibo = (x) => {
+const enésimoFibo = (x) => {
   let a = 0;
   let b = 1;
 
   for (let i = 2; i <= x; i++) {
     let time = a;
     a = b;
-    b = time + b;
+    b += time;
   }
   return b;
 };
-console.log(enesimoFibo(7));
+console.log(enésimoFibo(7));
 
 // Exercício 53 => Escreva uma função que aceita um numero como argumento e retorna se ele é primo ou não
 const isPrime = (x) => {
-  for (let i = 2; i <= x; i++) {
+  for (let i = 2; i < x; i++) {
     if (x % i === 0) {
       return false;
     }
   }
-  return true;
+  return x > 1;
 };
 console.log(isPrime(7));
 
-// Exercício 54 => Escreva uma função que ordene um array de números em ordem decrescente
-const ex54 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//! Exercício 54 => Escreva uma função que ordene um array de números em ordem decrescente
+const ex54 = [0, 1, 2, 3, 87, 4, 5, 45, 67, 6, 70, 8, 9, 10];
 
-const invertedOrder = (array) => {
-  return array.reverse();
-};
-console.log(invertedOrder(ex54));
+function invertedOrderTwo(array) {
+  return array.sort((x, y) => y - x);
+}
+console.log(invertedOrderTwo(ex54));
 
 // Exercício 55 => Escreva uma função que retorne o menor números em um array de números
 const ex55 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const lowerItem = (array) => {
+const lowerItemOne = (array) => {
   return Math.min(...array); // Spread Operator - Espalha os itens do array como argumentos para a função Math.min
 };
-console.log(lowerItem(ex55));
+console.log(lowerItemOne(ex55));
+
+function lowerItemTwo(array) {
+  return Math.min(...array);
+}
+console.log(lowerItemTwo(ex55));
 
 // Exercício 56 => Escreva uma função que retorne o maior número de um array de números
 const ex56 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -200,7 +205,11 @@ const callbackFunction = (z) => {
 console.log(callbackArray(ex65, callbackFunction));
 
 // Exercício 66 => Escreva uma função que aceite uma função de callback que retorne verdadeiro ou falso e um array, e retorne um novo array que contém apenas os elementos para os quais a função de callback retornou verdadeiro
-const ex66 = [[1, 2, 3],[4, 5, 6],[7, 8, 9]];
+const ex66 = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
 const callback = (arr) => arr.reduce((x, y) => x + y, 0);
 
 const arrayMap = (array, callback) => {
@@ -209,7 +218,11 @@ const arrayMap = (array, callback) => {
 console.log(arrayMap(ex66, callback));
 
 // Exercício 67 => Escreva uma função que aceite uma função de callback e um array de arrays, e retorne um novo array que contém os resultados de aplicar a função callback a cada array
-const arrays = [[1, 2, 3],[4, 5, 6],[7, 8, 9]];
+const arrays = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
 const callbackFunc = (arr) => arr.reduce((x, y) => x + y, 0);
 
 function arrayMapper(array, callback) {
@@ -232,7 +245,73 @@ function ex69(x, callback) {
     callback(i);
   }
 }
-const callbackEx69 = i => console.log(`Execução: ${i + 1}`);
+const callbackEx69 = (i) => console.log(`Execução: ${i + 1}`);
 ex69(10, callbackEx69);
 
-// Exercício 70 => Escreva uma função de alta ordem que aceite um array de funções de callback e um valor, e retorne um array de resultados de aplicar cada função de callback ao valor
+//! Exercício 70 => Escreva uma função de alta ordem que aceite um array de funções de callback e um valor, e retorne um array de resultados de aplicar cada função de callback ao valor
+function ex70(callback, value) {
+  return callback.map((callback) => callback(value));
+}
+const callbackEx70 = [(num) => num * 2, (num) => num * num, (num) => num / 2, (num) => num ** num];
+const value = 4;
+console.log(ex70(callbackEx70, value));
+
+// Exercício 71 => Escreva uma função que aceite uma função de callback e um número, e execute a função de callback após um certo tempo em milissegundos especificado pelo número
+function ex71(callback, time) {
+  setTimeout(callback, time);
+}
+const callbackEx71 = () => console.log("Executado!");
+ex71(callbackEx71, 2000);
+
+//! Exercício 72 => Escreva uma função que aceite um número, um array de callbacks e um valor inicial, e retorne o resultado final após a aplicação de todas as funções de callback no valor inicial, o número de vezes especificado
+function ex72(x, callback, value) {
+  let valor = value;
+  for (let i = 0; i <= x; i++) {
+    callback.forEach((callback) => {
+      valor = callback(valor);
+    });
+  }
+  return valor;
+}
+
+const callbackEx72 = [(num) => num + num, (num) => num ** 2];
+const valueInitial = 5;
+console.log(ex72(5, callbackEx72, valueInitial));
+
+//! Exercício 73 => Escreva uma função de alta ordem que aceite um número, um array de callbacks e um valor inicial, e retorne o resultado final após a aplicação de todas as funções de callback no valor inicial, a cada "x" milissegundos
+function ex73(x, callback, valorInitial) {
+  let valor = valorInitial;
+  let i = 0
+  let intervalId = setInterval(() => {
+    if (i < callback.length) {
+      valor = callback[i](valor);
+      i++;
+    } else {
+      clearInterval(intervalId);
+      console.log(valor);
+    }
+  }, x);
+}
+
+const callbackEx73 = [(num) => num * 2, (num) => num + 1];
+const valorInicial = 1;
+ex73(1000, callbackEx73, valorInicial);
+
+// Exercício 74 => Escreva uma função de alta ordem que aceite um função de callbacks e um array, e retorne um novo array que contem os resultados de aplicar a função de callback a cada elemento do array, sem alterar o array original
+function ex74(callback, array) {
+  return array.map(callback);
+}
+const arrayEx74 = [1, 2, 3, 4, 5];
+const callbackEx74 = (num) => num * 2;
+
+console.log(ex74(callbackEx74, arrayEx74));
+console.log(arrayEx74);
+
+// Exercício 75 => Escreva uma função de alta ordem que aceite um array de funções de callback e um valor, e retorne um novo array que contém os resultados de aplicar a função de callback ao valor, na ordem inversa 
+function ex75(arrayCb, value) {
+  return arrayCb.reverse().map((callback) => callback(value));
+}
+const callbackEx75 = [(num) => num + num, (num) => num ** 2];
+const valueInitialEx75 = 4
+
+console.log(ex75(callbackEx75, valueInitialEx75));
