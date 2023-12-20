@@ -192,28 +192,47 @@ const ex65 = [1, 2, 3, 4, 5];
 
 const callbackArray = (array, callback) => {
   return array.map(callback).reduce((x, y) => x + y, 0);
-}
+};
 
 const callbackFunction = (z) => {
   return z * 2;
-}
+};
 console.log(callbackArray(ex65, callbackFunction));
 
 // Exercício 66 => Escreva uma função que aceite uma função de callback que retorne verdadeiro ou falso e um array, e retorne um novo array que contém apenas os elementos para os quais a função de callback retornou verdadeiro
-const ex66 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-const callback = arr => arr.reduce((x, y) => x + y, 0);
+const ex66 = [[1, 2, 3],[4, 5, 6],[7, 8, 9]];
+const callback = (arr) => arr.reduce((x, y) => x + y, 0);
 
 const arrayMap = (array, callback) => {
   return array.map(callback);
-}
+};
 console.log(arrayMap(ex66, callback));
 
 // Exercício 67 => Escreva uma função que aceite uma função de callback e um array de arrays, e retorne um novo array que contém os resultados de aplicar a função callback a cada array
+const arrays = [[1, 2, 3],[4, 5, 6],[7, 8, 9]];
+const callbackFunc = (arr) => arr.reduce((x, y) => x + y, 0);
+
 function arrayMapper(array, callback) {
   return array.map(callback);
 }
-
-const arrays = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-const callbackFunc = (arr) => arr.reduce((x, y) => x + y, 0);
-
 console.log(arrayMapper(arrays, callbackFunc));
+
+// Exercício 68 => Escreva uma função de alta ordem que aceite um array de números e uma função de callback, e retorne um novo array que contém apenas os números do array original que satisfazem a condição da função de callback
+const ex68 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const callbackEx68 = (num) => num > 5;
+
+const ex68Func = (array, callback) => {
+  return array.filter(callback);
+};
+console.log(ex68Func(ex68, callbackEx68));
+
+// Exercício 69 => Escreva uma função que aceite um número e uma função de callback, e execute a função de callback o número de vezes especificado
+function ex69(x, callback) {
+  for (let i = 0; i < x; i++) {
+    callback(i);
+  }
+}
+const callbackEx69 = i => console.log(`Execução: ${i + 1}`);
+ex69(10, callbackEx69);
+
+// Exercício 70 => Escreva uma função de alta ordem que aceite um array de funções de callback e um valor, e retorne um array de resultados de aplicar cada função de callback ao valor
