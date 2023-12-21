@@ -22,18 +22,14 @@ const powTwo = (x) => {
 console.log(powTwo(4));
 
 // Exercício 48 => Escreva uma função que recebe um numero como argumento e retorna se ele é par ou ímpar
-const parOuInpar = (x) => {
-  let result;
-
+const parOuImpar = (x) => {
   if (x % 2 === 0) {
-    result = `${x} é par!`;
-    console.log(result);
+    return `${x} é par!`;
   } else {
-    result = `${x} é ímpar!`;
-    console.log(result);
+    return `${x} é ímpar!`;
   }
 };
-parOuInpar(8);
+console.log(parOuImpar(8));
 
 // Exercício 49 => Escreva uma função que aceita 3 números como argumentos e retorne o maior deles
 const maxNum = (x, y, z) => {
@@ -42,11 +38,13 @@ const maxNum = (x, y, z) => {
 console.log(maxNum(5, 43, 87));
 
 // Exercício 50 => Escreva uma função que aceita uma string como argumento e retorne essa string invertida
+const ex50 = `Hello`;
+
 const stringInverted = (x) => {
-  let stringInverted = x.split("").reverse().join("");
+  let stringInverted = x.split('').reverse().join('');
   return stringInverted;
 };
-console.log(stringInverted("hello"));
+console.log(stringInverted(ex50));
 
 // Exercício 51 => Escreva uma função que aceita um numero como argumento e retorna o fatorial desse numero
 const fatorialNum = (x) => {
@@ -95,13 +93,8 @@ console.log(invertedOrderTwo(ex54));
 // Exercício 55 => Escreva uma função que retorne o menor números em um array de números
 const ex55 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const lowerItemOne = (array) => {
-  return Math.min(...array); // Spread Operator - Espalha os itens do array como argumentos para a função Math.min
-};
-console.log(lowerItemOne(ex55));
-
 function lowerItemTwo(array) {
-  return Math.min(...array);
+  return Math.min(...array); // Spread Operator - Espalha os itens do array como argumentos para a função Math.min
 }
 console.log(lowerItemTwo(ex55));
 
@@ -129,7 +122,7 @@ const sumArrayTwo = (array) => {
 };
 console.log(sumArrayTwo(ex58));
 
-// Exercício 59 => Escreva uma função que receba um array de números e retorne um novo array com todos os números duplicados
+// Exercício 59 => Escreva uma função que receba um array de números e retorne um novo array com o dobro de cada numero do array original
 const ex59 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const duplicateArray = (array) => {
@@ -149,19 +142,19 @@ console.log(squareArray(ex60));
 const ex61 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const sqrtArray = (array) => {
-  return array.map((x) => Math.sqrt(x, 2));
+  return array.map((x) => Math.sqrt(x));
 };
 console.log(sqrtArray(ex61));
 
 // Exercício 62 => Escreva uma função que recebe um número e retorne um uma string repetida aquele número de vezes
-const ex62 = "Oi!";
+const ex62 = 'Oi!';
 
 const stringRepeat = (x) => {
   return ex62.repeat(x);
 };
 console.log(stringRepeat(10));
 
-// Exercício 63 => Escreva uma função que recebe um número e retorne um array com todos os números primos até aquele número.
+//! Exercício 63 => Escreva uma função que recebe um número e retorne um array com todos os números primos até aquele número.
 const primeN = (num) => {
   let prime = [];
   for (let i = 2; i <= num; i++) {
@@ -185,23 +178,20 @@ console.log(primeN(10));
 
 // Exercício 64 => Escreva uma função que recebe uma string como argumentos e retorne o número de palavras na string
 const ex64 = `Olá meu nome é João Bertholino`;
-console.log(ex64.split(" "));
 
 const stringCount = (string) => {
-  return string.split(" ").length;
+  return string.split(' ').length;
 };
-console.log(stringCount(ex64));
+console.log(`Esse string tem ${stringCount(ex64)} palavras!`);
 
-// Exercício 65 => Escreva uma função que aceite um array de números e uma função de callback e retorne a soma de todos os números do array após a aplicação da função de callback
+// Exercício 65 => Escreva uma função que aceite um array de números e uma função de callback e retorne o dobro da soma de todos os números do array após a aplicação da função de callback
 const ex65 = [1, 2, 3, 4, 5];
 
 const callbackArray = (array, callback) => {
   return array.map(callback).reduce((x, y) => x + y, 0);
 };
 
-const callbackFunction = (z) => {
-  return z * 2;
-};
+const callbackFunction = (x) => x * 2;
 console.log(callbackArray(ex65, callbackFunction));
 
 // Exercício 66 => Escreva uma função que aceite uma função de callback que retorne verdadeiro ou falso e um array, e retorne um novo array que contém apenas os elementos para os quais a função de callback retornou verdadeiro
@@ -260,7 +250,7 @@ console.log(ex70(callbackEx70, value));
 function ex71(callback, time) {
   setTimeout(callback, time);
 }
-const callbackEx71 = () => console.log("Executado!");
+const callbackEx71 = () => console.log('Executado!');
 ex71(callbackEx71, 2000);
 
 //! Exercício 72 => Escreva uma função que aceite um número, um array de callbacks e um valor inicial, e retorne o resultado final após a aplicação de todas as funções de callback no valor inicial, o número de vezes especificado
@@ -281,7 +271,7 @@ console.log(ex72(5, callbackEx72, valueInitial));
 //! Exercício 73 => Escreva uma função de alta ordem que aceite um número, um array de callbacks e um valor inicial, e retorne o resultado final após a aplicação de todas as funções de callback no valor inicial, a cada "x" milissegundos
 function ex73(x, callback, valorInitial) {
   let valor = valorInitial;
-  let i = 0
+  let i = 0;
   let intervalId = setInterval(() => {
     if (i < callback.length) {
       valor = callback[i](valor);
@@ -307,11 +297,11 @@ const callbackEx74 = (num) => num * 2;
 console.log(ex74(callbackEx74, arrayEx74));
 console.log(arrayEx74);
 
-// Exercício 75 => Escreva uma função de alta ordem que aceite um array de funções de callback e um valor, e retorne um novo array que contém os resultados de aplicar a função de callback ao valor, na ordem inversa 
+// Exercício 75 => Escreva uma função de alta ordem que aceite um array de funções de callback e um valor, e retorne um novo array que contém os resultados de aplicar a função de callback ao valor, na ordem inversa
 function ex75(arrayCb, value) {
   return arrayCb.reverse().map((callback) => callback(value));
 }
 const callbackEx75 = [(num) => num + num, (num) => num ** 2];
-const valueInitialEx75 = 4
+const valueInitialEx75 = 4;
 
 console.log(ex75(callbackEx75, valueInitialEx75));
