@@ -1,15 +1,31 @@
-const primaryFunction = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log("Simulando retorno de API!");
-      resolve();
-    }, 2000);
-  });
-};
+console.time('Tempo de execução');
+function fib(n) {
+  let x = 0;
+  let y = 1;
+  let temp;
 
-const secondaryFunction = async () => {
-  console.log("Iniciou a execução!");
-  await primaryFunction();
-  console.log("Terminou a execução ao receber os dados da API!");
-};
-secondaryFunction();
+  for (let i = 0; i < BigInt(n); i++) {
+    temp = BigInt(x) + BigInt(y);
+    x = y;
+    y = temp;
+  }
+  console.log(temp);
+}
+fib(10000);
+console.timeEnd('Tempo de execução');
+
+// console.time('Tempo de execução');
+// function fib(n) {
+//   let x = 0;
+//   let y = 1;
+//   let temp;
+
+//   for (let i = 0; i < n; i++) {
+//     temp = x + y;
+//     x = y;
+//     y = temp;
+//   }
+//   console.log(temp);
+// }
+// fib(10000);
+// console.timeEnd('Tempo de execução');
